@@ -21,29 +21,3 @@ We get the tools we depend upon via `npm`. And install
 ```
 npm install
 ```
-
-if nightmare show error 'EACCES: permission denied', use this command:
-
-```
-sudo npm install nightmare --unsafe-perm=true --allow-root
-```
-
-Create a file `.env` like a default file `.env.default`
-
-### Run application
-
-#### Only nightmare 
-
-npm run [MODULE]:[TEST_NAME]
-```
-npm run venom:debit
-```
-
-#### Mocha test
-
-##### `This section is not implemantated`
-
-npm run [MODULE]:[TEST_NAME]:test
-```
-npm run venom:debit:test
-```
