@@ -9,10 +9,16 @@
   "author": "Marcio Henrique",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.3.1",
     "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^3.0.1",
     "gulp-rename": "^1.4.0",
-    "gulp-uglify": "^3.0.1"
+    "gulp-strip-css-comments": "^2.0.0",
+    "gulp-uglify": "^3.0.1",
+    "install": "^0.12.1",
+    "npm": "^6.4.1",
+    "run-sequence": "^2.2.1"
   }
 }

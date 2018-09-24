@@ -271,7 +271,7 @@ nav.navbar.bootsnav ul.nav > li.active:after {
 ---------------------------------------------------------------------------------------*/
 
 #welcome-area {
-    background-image: url(../assets/img/welcome-img.jpg);
+    background-image: url(../../assets/img/welcome-img.jpg);
     position: relative;
     display: flex;
     vertical-align: middle;
@@ -1409,7 +1409,7 @@ user-select:none;
     padding: 70px 70px 80px;
     position: absolute;
     right: 12%;
-    bottom: 80px;
+    bottom: 25%;
 }
 
 .contact-form h5 {
