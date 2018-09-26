@@ -6,6 +6,7 @@ var concat = require('gulp-concat');
 var strip  = require('gulp-strip-css-comments');
 var clean = require('gulp-clean');
 var runSequence = require('run-sequence');
+var htmlmin = require('gulp-htmlmin');
 
 gulp.task('clean', function () {
   return gulp.src('./dist/*').pipe(clean());
@@ -50,5 +51,5 @@ gulp.task('scripts', function(){
 });
 
 gulp.task('default', function (cb) {
-  return runSequence('clean', [ 'styles', 'scripts', 'fonts' ], cb);
+  return runSequence('clean', [ 'styles', 'scripts', 'fonts', 'html' ], cb);
 });
