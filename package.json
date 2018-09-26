@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "gulp"
+    "build": "sudo npm i && gulp"
   },
   "author": "Marcio Henrique",
   "license": "ISC",
