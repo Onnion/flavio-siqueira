@@ -11,6 +11,14 @@ gulp.task('clean', function () {
   return gulp.src('./dist/*').pipe(clean());
 });
 
+gulp.task('html', () => {
+  return gulp.src('assets/html/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(concat('index.html'))
+    .pipe(gulp.dest('./'));
+});
+
+
 gulp.task('styles', function(){
   return gulp.src(
     [
