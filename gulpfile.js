@@ -27,9 +27,6 @@ gulp.task('styles', function(){
       'node_modules/@fortawesome/fontawesome-free/css/all.css'
     ])
     .pipe(csso())
-    .pipe(rename({
-      suffix: '.min'
-    }))
     .pipe(concat('all.css'))
     .pipe(strip({preserve: false}))
     .pipe(gulp.dest('gulp/css'))
@@ -47,9 +44,6 @@ gulp.task('scripts', function(){
       'assets/js/!(jquery)*.js'
     ])
     .pipe(uglify())
-    .pipe(rename({
-      suffix: '.min'
-    }))
     .pipe(concat('all.js'))
     .pipe(gulp.dest('gulp/js'))
 });

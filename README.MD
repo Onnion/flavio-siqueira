@@ -8,10 +8,16 @@ To get started, you can simply clone this repository and install the dependencie
 
 #### 1. Gulp
 
-You must have GIT to clone this repository:
-
+install `gulp` for build a compile files
 ```
 sudo apt-get gulp
+```
+
+#### 2. Http-server
+
+install `http-server` for serve files
+```
+ npm install http-server -g
 ```
 
 ### Install dependencies
