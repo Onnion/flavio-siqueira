@@ -485,7 +485,7 @@ nav.navbar.bootsnav ul.nav > li.active:after {
     height: 100%;
     content: '';
     z-index: -1;
-    background-image: url(../img/about-area-video-before-image.png);
+    background-image: url(../../assets/img/about-area-video-before-image.png);
     background-repeat: no-repeat;
     display: inline-block;
     background-color: #2E383A;
