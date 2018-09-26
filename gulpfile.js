@@ -41,7 +41,11 @@ gulp.task('fonts', function() {
 })
 
 gulp.task('scripts', function(){
-  return gulp.src('assets/js/*.js')
+  return gulp.src(
+    [
+      'assets/js/jquery.js',
+      'assets/js/!(jquery)*.js'
+    ])
     .pipe(uglify())
     .pipe(rename({
       suffix: '.min'
