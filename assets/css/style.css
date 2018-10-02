@@ -1509,3 +1509,24 @@ user-select:none;
 .footer-info-content p {
     color: #aeb3b4
 }
+
+.social-links {
+    position: fixed!important;
+    right: 10px;
+    display: flex;
+    z-index: 9999;
+    top: 0;
+    height: 100vh;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links ul {
+    background: rgba(0, 0, 0, .6);
+    padding: 20px;
+}
+
+.social-links ul li a {
+    color: #FFF;
+}

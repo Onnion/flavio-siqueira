@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "gulp && http-server ./",
+    "dev:gulp": "gulp && gulp watch",
+    "dev:server": "http-server ./",
     "build": "sudo npm i && gulp"
   },
   "author": "Marcio Henrique",
@@ -19,6 +20,7 @@
     "gulp-rename": "^1.4.0",
     "gulp-strip-css-comments": "^2.0.0",
     "gulp-uglify": "^3.0.1",
+    "gulp-watch": "^4.3.11",
     "run-sequence": "^2.2.1"
   }
 }

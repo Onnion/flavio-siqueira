@@ -27,3 +27,10 @@ We get the tools we depend upon via `npm`. And install
 ```
 npm install
 ```
+
+### Run project
+```
+npm run dev:gulp
+npm run dev:server
+
+```
