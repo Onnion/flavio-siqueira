@@ -1391,7 +1391,7 @@ user-select:none;
 
 #contact-area {
     padding: 118px 0 0;
-    background-color: #2e383a;
+    /* background-color: #2e383a; */
     position: relative
 }
 #contact-area .section-heading h6 {
@@ -1524,9 +1524,12 @@ user-select:none;
 
 .social-links ul {
     background: rgba(0, 0, 0, .6);
-    padding: 20px;
+    padding: 15px;
+    margin: 5px 0px;
+    border-radius: 30px;
 }
 
 .social-links ul li a {
     color: #FFF;
+    font-size: 1.2em;
 }

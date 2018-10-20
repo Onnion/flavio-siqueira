@@ -20,7 +20,7 @@ var paths = {
   font: 'node_modules/@fortawesome/fontawesome-free/webfonts/*.*'
 }
 
-gulp.task('clean', function () {
+gulp.task('clean', () => {
   return gulp.src('./dist/*').pipe(clean());
 });
 
@@ -32,7 +32,7 @@ gulp.task('html', () => {
 });
 
 
-gulp.task('styles', function(){
+gulp.task('styles', () => {
   return gulp.src(paths.styles)
     .pipe(csso())
     .pipe(concat('all.css'))
@@ -40,24 +40,24 @@ gulp.task('styles', function(){
     .pipe(gulp.dest('gulp/css'))
 });
 
-gulp.task('fonts', function() {
+gulp.task('fonts', () => {
   return gulp.src(paths.font)
     .pipe(gulp.dest('gulp/webfonts/'));
 })
 
-gulp.task('scripts', function(){
+gulp.task('scripts', () => {
   return gulp.src(paths.scripts)
     .pipe(uglify())
     .pipe(concat('all.js'))
     .pipe(gulp.dest('gulp/js'))
 });
 
-gulp.task('default', function (cb) {
+gulp.task('default', (cb) => {
   return runSequence('clean', [ 'styles', 'scripts', 'fonts', 'html' ], cb);
 });
 
-gulp.task('watch', function () {
-  gulp.watch(paths.html, ['index']);
+gulp.task('watch', () => {
+  gulp.watch(paths.html, ['html']);
   gulp.watch(paths.scripts, ['scripts']);
   gulp.watch(paths.styles, ['styles']);
 });
