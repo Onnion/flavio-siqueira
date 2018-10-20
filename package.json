@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev:gulp": "gulp && gulp watch",
-    "dev:server": "http-server ./",
+    "dev:server": "http-server ./public",
     "build": "sudo npm i && gulp"
   },
   "author": "Marcio Henrique",

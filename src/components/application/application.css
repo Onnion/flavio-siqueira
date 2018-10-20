@@ -1,0 +1,159 @@
+/*-------------------------------------------------------------------------------------
+    Application Area
+---------------------------------------------------------------------------------------*/
+
+#application-area {
+    padding: 118px 0 120px;
+    position: relative;
+    background-image: url(../img/application-form-bg.jpg);
+}
+
+.application-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    background-color: rgba(46, 56, 58, 0.94);
+    width: 100%;
+    height: 100%
+}
+.application-heading-btn {
+    margin-top: 22px;
+}
+.application-heading-btn button {
+    height: 60px;
+    padding: 0 50px;
+    border-radius: 0 30px 30px 0;
+    border: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    margin: 10px 0 0
+}
+
+.application-heading-btn button:focus {
+    outline: 0
+}
+
+.application-heading-btn button.active {
+    background-color: #d7a56e;
+    border-radius: 30px 0 0 30px;
+    border-color: #d7a56e;
+}
+
+.application-heading-btn button:hover,
+.application-heading-btn button.active:hover {
+    background-color: #fff;
+    border-color: #fff;
+    color: #2e383a
+}
+
+.application-form .form-group {
+    margin: 0 0 36px
+}
+
+.application-form label {
+    color: #aeb3b4;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 15px;
+    font-family: 'Merriweather', serif;
+}
+
+.application-form label span {
+    color: #d7a56e;
+    margin-left: 5px
+}
+
+.application-form input,
+.application-form textarea,
+.application-form select,
+.application-form input:focus,
+.application-form textarea:focus,
+.application-form select:focus {
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #aeb3b4 !important;
+    font-size: 14px
+}
+
+.application-form input,
+.application-form select {
+    height: 60px !important;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+.application-form input:focus,
+.application-form select:focus{
+    outline: none;
+    box-shadow: none;
+}
+.application-form textarea {
+    height: 250px
+}
+
+.application-btn button {
+    padding: 15px 60px;
+    border-radius: 30px;
+    border: 0;
+    background-color: #d7a56e;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    margin: 14px 0 0;
+}
+
+.application-btn button:hover {
+    background-color: #bf884c
+}
+.application-heading-btn button {
+    border-left: none;
+}
+#application-area .section-heading {
+    padding-bottom: 70px;
+}
+
+#application-area .section-heading h6 {
+    margin-bottom: 20px;
+}
+.form-group.has-icon{
+    position: relative;
+}
+.form-group.has-icon .the-icon{
+    position: absolute;
+    right: 30px;
+    top: 55px;
+    color: #aeb3b4;
+    font-size: 14px;
+    display: none;
+}
+select {
+-webkit-touch-callout:none;
+/* iOS Safari */
+
+-webkit-user-select:none;
+/* Chrome/Safari/Opera */
+
+-khtml-user-select:none;
+/* Konqueror */
+
+-moz-user-select:none;
+/* Firefox */
+
+-ms-user-select:none;
+/* Internet Explorer/Edge */
+
+user-select:none;
+}
+.form-group textarea {
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+.form-group textarea:focus {
+    outline: none;
+    box-shadow: none;
+}
+.application-btn button {
+    letter-spacing: 2px;
+}

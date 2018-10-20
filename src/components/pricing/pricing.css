@@ -1,0 +1,150 @@
+/*-------------------------------------------------------------------------------------
+    Pricing Area
+---------------------------------------------------------------------------------------*/
+
+#pricing-area {
+    padding: 118px 0 152px;
+}
+
+.pricing-table-single {
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    position: relative;
+    transition: .3s ease-in;
+}
+#pricing-area .section-heading {
+    padding-bottom: 72px;
+}
+
+#pricing-area .section-heading h6 {
+    margin-bottom: 20px;
+}
+.pricing-header {
+    background-image: url(../img/location-6.png);
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px 6px 0 0;
+}
+
+.pricing-header.two {
+    background-image: url(../img/location-7.png);
+}
+
+.pricing-header.three {
+    background-image: url(../img/location-8.png);
+}
+
+.pricing-header-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 56, 56, 0.5)
+}
+
+.pricing-header h1 {
+    position: relative;
+    padding: 0 0 15px;
+    font-weight: 700
+}
+
+.pricing-header h1 span {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-left: -15px
+}
+
+.pricing-header p {
+    padding: 45px 0 0;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 700
+}
+
+.pricing-details {
+    padding: 35px 60px 65px;
+}
+
+.pricing-details ul li {
+    font-size: 14px;
+    color: #818181;
+    padding: 8px 0;
+}
+
+.pricing-details ul li i {
+    color: #d7a56e;
+    padding-right: 15px;
+}
+
+.pricing-details ul li.no {
+    color: #9d9bae;
+    text-decoration: line-through;
+}
+
+.pricing-details ul li.no i {
+    color: #9d9bae;
+}
+
+.pricing-table-footer {
+    position: absolute;
+    left: 0;
+    bottom: -34px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.pricing-table-footer i {
+    height: 60px;
+    width: 60px;
+    border: 1px solid #e5e5e5;
+    border-radius: 50%;
+    line-height: 59px;
+    font-size: 18px;
+    color: #d7a56e;
+    background-color: #fff;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+.pricing-table-single:hover {
+    border-color: #d7a56e;
+}
+.pricing-table-single:hover .pricing-table-footer i {
+    border-color: #d7a56e;
+    background-color: #d7a56e;
+    color: #fff;
+}
+#pricing-area .nav-tabs {
+    margin: 0 0 40px;
+    border-bottom: 0;
+}
+
+#pricing-area .nav-tabs li a {
+    width: 152px;
+    line-height: 55px;
+    font-size: 14px;
+    padding: 2px;
+    background-color: transparent;
+    color: #8e89a9;
+    border: 2px solid rgba(0,0,0,0.10);
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 -2px
+}
+
+#pricing-area .nav-tabs li.active a {
+    background-color: #d7a56e;
+    border-color: #d7a56e;
+    color: #fff
+}
+
+#pricing-area .nav-tabs li:first-child > a {
+    border-radius: 30px 0 0 30px;
+}
+
+#pricing-area .nav-tabs li:last-child > a {
+    border-radius: 0 30px 30px 0;
+
+}

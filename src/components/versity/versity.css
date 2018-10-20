@@ -1,0 +1,45 @@
+/*-------------------------------------------------------------------------------------
+    Versity Area
+---------------------------------------------------------------------------------------*/
+
+#versity-area {
+    padding: 118px 0 90px;
+}
+#versity-area .section-heading {
+    padding-bottom: 70px;
+}
+.versity-single {
+    position: relative;
+    overflow: hidden;
+    margin: 0 0 30px
+}
+.versity-single img{
+	width:100%;
+}
+.versity-single-overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3)
+}
+
+.versity-overlay-cont {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+}
+
+.versity-single-overlay i {
+    color: #ffa200;
+}
+
+.versity-overlay-cont h5 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 32px;
+    font-family: 'Merriweather', serif;
+}

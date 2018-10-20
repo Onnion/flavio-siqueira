@@ -1,0 +1,30 @@
+/*-------------------------------------------------------------------------------------
+    Footer Area
+---------------------------------------------------------------------------------------*/
+
+#footer {
+    background-color: #1e2729;
+    padding: 22px 0 10px
+}
+
+.footer-social ul li {
+    display: inline-block;
+}
+
+.footer-social ul li a {
+    padding: 0 5px;
+    color: #fff;
+}
+
+.copyright-text p {
+    color: #c2c8c9
+}
+
+.footer-info-content img {
+    margin: 0 0 35px
+}
+
+.footer-info-content p {
+    color: #aeb3b4
+}
+

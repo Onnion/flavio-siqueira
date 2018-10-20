@@ -1,0 +1,60 @@
+/*-------------------------------------------------------------------------------------
+    Visa Process Area
+---------------------------------------------------------------------------------------*/
+
+#visa-process-area {
+    padding: 118px 0 88px
+}
+#visa-process-area .section-heading h6 {
+    margin-bottom: 20px;
+}
+#visa-process-area .section-heading{
+    padding-bottom: 52px;
+}
+.visa-process-single {
+    margin: 0 0 30px;
+    position: relative;
+    z-index: 0;
+}
+.visa-process-single .bg-text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 80px;
+    line-height: 60px;
+    color: rgba(255,255,255,.06);
+    font-weight: 700;
+    font-family: 'Merriweather',
+    serif;
+    z-index: -1;
+}
+.visa-process-single h5 {
+    font-weight: 700;
+    font-family: 'Merriweather', serif;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 0 0
+}
+
+.visa-process-single p {
+    color: #aeb3b4
+}
+
+.visa-process-single button {
+    background-color: #d7a56e;
+    padding: 15px 60px;
+    border-radius: 30px;
+    border: 0;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    outline: none
+}
+
+.visa-process-single button:hover {
+    background-color: #bf884c;
+}
+
+.visa-process-single button i {
+    padding-right: 10px;
+}

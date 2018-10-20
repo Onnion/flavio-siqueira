@@ -1,0 +1,83 @@
+/*-------------------------------------------------------------------------------------
+    Welcome Area
+---------------------------------------------------------------------------------------*/
+
+#welcome-area {
+    background-image: url(../../assets/img/welcome-img.jpg);
+    position: relative;
+    display: flex;
+    vertical-align: middle;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+} 
+#welcome-area .right-image{
+    position: absolute;
+    right: 20%;
+    top: 22%;
+    z-index: 1;
+}
+.welcome-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: -moz-linear-gradient( 90deg, rgb(20, 20, 24) 0%, rgba(16, 16, 19, 0.5) 20%, rgba(0, 0, 0, 0) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(20, 20, 24) 0%, rgba(16, 16, 19, 0.5) 20%, rgba(0, 0, 0, 0) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(20, 20, 24) 0%, rgba(16, 16, 19, 0.5) 20%, rgba(0, 0, 0, 0) 100%); 
+}
+
+.welcome-content {
+    position: relative;
+}
+
+.welcome-content h3 {
+    font-size: 40px;
+    line-height: 50px;
+    -webkit-animation: 1s .2s fadeInUp both;
+    animation: 1s .2s fadeInUp both;
+}
+
+.welcome-content h1 {
+    font-weight: 700;
+    font-family: 'Merriweather', serif;
+    margin: 0 0 20px;
+    -webkit-animation: 1s .4s fadeInUp both;
+    animation: 1s .4s fadeInUp both;
+}
+
+.welcome-content p {
+    color: #dbdada;
+    -webkit-animation: 1s .6s fadeInUp both;
+    animation: 1s .6s fadeInUp both;
+}
+
+.welcome-btns {
+    margin: 35px 0 0;
+     -webkit-animation: 1s .7s fadeInUp both;
+    animation: 1s .7s fadeInUp both;
+}
+
+.welcome-btns a {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px 45px;
+    border-radius: 30px;
+    margin-right: 20px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.welcome-btns a.bg {
+    background-color:#d7a56e;
+    
+}
+.welcome-btns a.bg:hover {
+    
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.welcome-btns a:hover{
+    background-color:#d7a56e;
+}

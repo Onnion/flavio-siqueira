@@ -1,0 +1,73 @@
+/*-------------------------------------------------------------------------------------
+    Passport Types Area
+---------------------------------------------------------------------------------------*/
+
+#passport-process-area {
+    padding: 118px 0 120px 0;
+}
+
+#passport-process-area .nav-tabs {
+    margin: 0 0 40px;
+    border-bottom: 0
+}
+
+#passport-process-area .nav-tabs li.active a {
+    background-color: #fff;
+    border-color: #d7a56e;
+    color: #d7a56e;
+    border-radius: 30px;
+    padding: 12px 18px;
+}
+
+#passport-process-area .nav-tabs li a {
+    color: #b8b2ac;
+    border-radius: 30px;
+    padding: 12px 18px;
+    margin: 0 4px; 
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+}
+
+#passport-process-area .nav-tabs li a:hover {
+    background-color: #d7a56e;
+    border-color: #d7a56e;
+    color: #fff;
+}
+#passport-process-area .section-heading {
+    padding-bottom: 70px;
+}
+
+#passport-process-area .section-heading h6 {
+    margin-bottom: 15px;
+}
+.nav-tabs > li,
+.nav-pills > li {
+    float: none;
+    display: inline-block;
+}
+
+.nav-tabs,
+.nav-pills {
+    text-align: center;
+}
+
+.passport-content {
+    padding: 40px 0 0;
+}
+
+.passport-content h6 {
+    color: #d7a56e;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.passport-content h3 {
+    font-weight: 700;
+    font-family: 'Merriweather', serif;
+    margin: 0 0 35px;
+    font-size: 48px;
+    line-height: 58px;
+}

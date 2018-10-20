@@ -1,0 +1,69 @@
+/*-------------------------------------------------------------------------------------
+    Header Area
+---------------------------------------------------------------------------------------*/
+
+#header {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+nav.navbar.bootsnav {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+nav.navbar.bootsnav ul.nav > li > a {
+    color: #c5c5c5;
+    padding: 45px 15px
+}
+
+nav.navbar.bootsnav ul.nav > li > a:hover,
+nav.navbar.bootsnav ul.nav > li.active > a {
+    color: #fff;
+}
+
+nav.navbar.bootsnav ul.nav > li.active:after {
+    content: '';
+    height: 4px;
+    background-color: #d7a56e;
+    width: 80px;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+}
+
+.sticky {
+    padding: 4px 0;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc;
+    background-color: #fff;
+}
+
+.sticky nav.navbar.bootsnav ul.nav > li > a {
+    color: #2e383a
+}
+
+.sticky nav.navbar.bootsnav ul.nav > li.active > a,
+.sticky nav.navbar.bootsnav ul.nav > li:hover a {
+    color: #000;
+}
+
+.sticky nav.navbar.bootsnav ul.nav > li.active:after {
+    bottom: -6px;
+}
+
+.navbar-brand {
+    padding: 30px 15px;
+}
+
+.navbar-brand.scrolled-logo,
+.sticky .navbar-brand.main-logo {
+    display: none !important
+}
+
+.sticky .navbar-brand.scrolled-logo {
+    display: inline-block !important
+}

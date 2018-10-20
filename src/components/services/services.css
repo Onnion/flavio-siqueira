@@ -1,0 +1,43 @@
+/*-------------------------------------------------------------------------------------
+    Services Area
+---------------------------------------------------------------------------------------*/
+#services-area .section-heading {
+    padding-bottom: 56px;
+}
+
+#services-area .section-heading h6 {
+    margin-bottom: 20px;
+}
+
+#services-area {
+    padding: 118px 0 77px 0;
+}
+.service-single {
+    margin: 0 0 40px;
+    position: relative;
+}
+.service-single .bg-text {
+    position: absolute;
+    top: 40px;
+    font-size: 100px;
+    line-height: 60px;
+    font-weight: 700;
+    font-family: 'Merriweather',serif;
+    color: rgba(46,56,58,.10);
+}
+
+.serv-icon {
+    margin: 0 0 25px;
+}
+
+.service-single h4 {
+    font-weight: 700;
+    font-family: 'Merriweather', serif;
+    transition: .3s ease-in;
+}
+.service-single:hover h4 {
+    color: #D7A56E;
+}
+.application-heading-btn {
+    margin-top: 22px;
+}

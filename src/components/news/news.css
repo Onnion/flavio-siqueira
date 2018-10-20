@@ -1,0 +1,32 @@
+/*-------------------------------------------------------------------------------------
+    News Area
+---------------------------------------------------------------------------------------*/
+
+#news-area {
+    padding: 118px 0 110px
+}
+#news-area .section-heading {
+    padding-bottom: 70px;
+}
+#news-area .section-heading h6 {
+    color: #d7a56e;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.blog-single h6 {
+    font-size: 14px;
+    color: #d7a56e;
+    font-weight: 700;
+    margin: 26px 0 10px;
+    text-transform: uppercase
+}
+
+.blog-single h5 a {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 32px;
+    color: #fff;
+    font-family: 'Merriweather', serif;
+}
