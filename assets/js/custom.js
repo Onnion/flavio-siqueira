@@ -47,34 +47,6 @@
                 }
             }
         });
-		/*-----------------------------------
-			testimonial carousel
-		-----------------------------------*/
-        var $testimonialCarousel = $('#testimonial-carousel');
-			$testimonialCarousel.owlCarousel({
-            loop: true,
-            autoplay: true,
-            autoPlayTimeout: 1000,
-            dots: false,
-            nav: false,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                768: {
-                    items: 1
-                },
-                960: {
-                    items: 1
-                },
-                1200: {
-                    items: 1
-                },
-                1920: {
-                    items: 1
-                }
-            }
-        });
         /*---------------------------------------------------
             Smooth Scroll
         ----------------------------------------------------*/
@@ -116,6 +88,12 @@
             WOW JS Activation
         ----------------------------------------------------*/
         new WOW().init();
+
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+
+        }, 100)
+
     });
     
 

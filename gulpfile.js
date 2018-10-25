@@ -15,7 +15,9 @@ var paths = {
   ],
   scripts: [
     'assets/js/jquery.js',
-    'assets/js/!(jquery)*.js'
+    'assets/js/!(jquery)*.js',
+    'assets/js/services/*.js'
+
   ],
   font: 'node_modules/@fortawesome/fontawesome-free/webfonts/*.*'
 }
