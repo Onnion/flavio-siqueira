@@ -67,7 +67,6 @@ function renderNews(news, $newsCarousel) {
 
         news.forEach(function($new) {
        
-            $newsCarousel.addClass('asdasdasd');
             $newsCarousel.append(renderNew($new));
             
         });
@@ -76,12 +75,11 @@ function renderNews(news, $newsCarousel) {
 
     initNewsCarousel();
 
-
 }
 
 
 function injectionNews() {
-    var url = config.API_URL + '/contents';
+    var url = config.API_URL + '/contents/news';
     var $newsCarousel = $('#news-carousel');
 
     $.get(url, function (data) {

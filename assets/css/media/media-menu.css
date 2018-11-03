@@ -1,0 +1,54 @@
+.media-menu {
+    background: #FFFFFF;
+    width: 150px;
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    flex-direction: column;
+
+}
+
+.media-menu div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    width: 100%;
+}
+
+.media-menu .content-type {
+    cursor: pointer;
+
+}
+
+.media-menu .content-type > div {
+    color: #FFFFFF;
+    display: block;
+}
+
+.media-menu .content-type > div i,
+.media-menu .content-type > div p {
+    color: #a9a9a9;
+    font-size: 1.4em;
+
+}
+
+.media-menu .content-type > div i {
+    font-size: 2em!important;
+
+}
+
+.media-menu .content-type.active {
+    background: var(--main-color);
+}
+
+.media-menu .content-type.active > div i,
+.media-menu .content-type.active > div p {
+    color: #FFFFFF;
+}
