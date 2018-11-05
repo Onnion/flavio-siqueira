@@ -87,7 +87,7 @@ $(document).ready(function () {
     injectionData();
 
     $('.content-type').on('click', function () {
-
+        window.stop();
         toogleMenu(this);
         injectionData();
     });

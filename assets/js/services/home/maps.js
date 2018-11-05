@@ -19,6 +19,6 @@ function loadMap() {
         position: position,
         map: map,
         title: 'Click to zoom'
-      });
+    });
 
 }
