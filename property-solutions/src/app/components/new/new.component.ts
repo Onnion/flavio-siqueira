@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { New } from '../../models/new.model';
 
 @Component({
   selector: 'app-new',
@@ -7,15 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewComponent implements OnInit {
 
+  @Input() new: New;
+
   constructor() { }
 
 
   public createText(text: string) {
     let preview = text;
 
-    // if (preview.length > 100) {
-    //     preview = preview.substr(0, 155) + '...';
-    // }
+    if (preview.length > 100) {
+        preview = preview.substr(0, 155) + '...';
+    }
 
     return preview;
   }

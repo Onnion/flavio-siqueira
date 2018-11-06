@@ -1,7 +1,489 @@
+<!-- start preloader-->
+<!-- <div class="site-preloader">
+    <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+</div> -->
+<!--start preloader -->
 
-<app-menu (selectMenu)="loadData($event)"></app-menu>
+<app-navbar></app-navbar>
 
-<div class="main-wraper">
-    <app-loading [loading]="loading"></app-loading>
-    <app-display-data [type]="type" [data]="data"></app-display-data>
-</div>
+<!--start welcome area-->
+<section id="welcome-area" class="bg-cover">
+
+    <div class="welcome-overlay"></div>
+    <!--start container-->
+    <div class="container">
+        <!--start row-->
+        <div class="row">
+            <!--start welcome content-->
+            <div class="col-md-7">
+                <div class="welcome-content">
+                    <div class="d-table">
+                        <div class="d-table-cell">
+                            <h1 class="text-white">Property Solutions</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper sagittis enim, a
+                                sodales enim maximus ac. </p>
+                            <div class="welcome-btns">
+                                <a class="bg" href="">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end welcome content-->
+
+            <!-- <div class="col-md-5">
+                    <div class="right-image">
+                        <img src="assets/img/header-right-image.png" alt="header right image" style=" width:100%;"">
+                    </div>
+                </div> -->
+        </div>
+        <!--end row-->
+    </div>
+    <!--end container-->
+</section>
+<!--end welcome area-->
+
+<!--start mission area-->
+<section id="mission-area" class="bg-dark">
+    <!--start container-->
+    <div class="container">
+        <!--start section heading-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading text-center">
+                    <h2 class="text-white">Quem somos</h2>
+                </div>
+            </div>
+        </div>
+        <!--end section heading-->
+        <div class="row">
+            <!--start mission content-->
+            <div class="col-md-6">
+                <div class="mission-content">
+                    <div class="mission-dots">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <h3 class="text-white">Property Solutions</h3>
+                    <p>
+                        Empesa especialmente criada no intuito de satisfazer, primordialmente, as necessidades dos
+                        nossos clientes, através da implementação de ações previamente planejadas, com vistas ao
+                        desenvolvimento de uma governança imobiliária eficaz perante o patrimônio e ativos
+                        imobiliários, nas áreas de Property, Legal Permits e Asset Management.
+                    </p>
+                    <p>
+                        Desta forma, damos todo apoio prévio às transações comerciais, realizando a devida
+                        legalização necessária as aquisições e vendas de imóveis, com vistas a resguardar os
+                        interesses comerciais e legais dos nossos clientes, bem como as oportunidades de
+                        investimento imobiliário, de construção e desenvolvimento imobiliário, além do cumprimento
+                        dos códigos e leis governamentais.
+                    </p>
+                </div>
+            </div>
+            <!--end mission content-->
+            <!--start mission video-->
+            <div class="col-md-6">
+                <div class="mission-video bg-cover">
+                    <div class="mission-video-img wow fadeInRight">
+                        <img src="http://via.placeholder.com/500x360" class="img-responsive" alt="">
+                        <div class="mission-video-overlay">
+                            <div class="d-table">
+                                <div class="d-table-cell">
+                                    <a class="popup-video" href="https://www.youtube.com/watch?v=Mi1QBxVjZAw"><i class="fa fa-play"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end mission content-->
+        </div>
+    </div>
+    <!--end container-->
+</section>
+<!--end mission area-->
+
+<!--start passport process area-->
+<section id="passport-process-area">
+    <div class="container">
+        <!--start section heading-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading text-center">
+                    <h2>Áreas de atuação</h2>
+                </div>
+            </div>
+        </div>
+        <!--end section heading-->
+        <div class="row">
+            <div role="tabpanel">
+                <!--start tab menu-->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#property" aria-controls="property" role="tab" data-toggle="tab">
+                            PROPERTY
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#legal-permits" aria-controls="legal-permits" role="tab" data-toggle="tab">
+                            LEGAL PERMITS
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#asset-manangement" aria-controls="asset-manangement" role="tab" data-toggle="tab">
+                            ASSET MANANGEMENT
+                        </a>
+                    </li>
+                </ul>
+                <!--end tab menu-->
+
+                <!--start tab content-->
+                <div class="tab-content">
+
+                    <!--start tab content single-->
+                    <div role="tabpanel" class="tab-pane active" id="property">
+                        <div class="row">
+                            <!--start service single-->
+                            <div class="col-md-3 col-sm-6">
+                                <div class="service-single">
+                                    <span class="bg-text">01</span>
+                                    <div class="serv-icon">
+                                        <img src="assets/img/icon-map-marker.png" class="img-responsive" alt="">
+                                    </div>
+                                    <h4>Lorem ipsum</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper sagittis
+                                        enim, a sodales
+                                        enim maximus ac.</p>
+                                </div>
+                            </div>
+                            <!--end service single-->
+                        </div>
+                    </div>
+                    <!--end tab content single-->
+
+                    <!--start tab content single-->
+                    <div role="tabpanel" class="tab-pane" id="legal-permits">
+                        <div class="row">
+                            <!--start service single-->
+                            <div class="col-md-3 col-sm-6">
+                                <div class="service-single">
+                                    <span class="bg-text">01</span>
+                                    <div class="serv-icon">
+                                        <img src="assets/img/icon-map-marker.png" class="img-responsive" alt="">
+                                    </div>
+                                    <h4>Lorem ipsum</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper sagittis
+                                        enim, a sodales
+                                        enim maximus ac.</p>
+                                </div>
+                            </div>
+                            <!--end service single-->
+                            <!--start service single-->
+                            <div class="col-md-3 col-sm-6">
+                                <div class="service-single">
+                                    <span class="bg-text">02</span>
+                                    <div class="serv-icon">
+                                        <img src="assets/img/icon-ticket.png" class="img-responsive" alt="">
+                                    </div>
+                                    <h4>Lorem ipsum</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper sagittis
+                                        enim, a sodales
+                                        enim maximus ac.</p>
+                                </div>
+                            </div>
+                            <!--end service single-->
+                        </div>
+                    </div>
+                    <!--end tab content single-->
+
+                    <!--start tab content single-->
+                    <div role="tabpanel" class="tab-pane" id="asset-manangement">
+                        <div class="row">
+                            <!--start service single-->
+                            <div class="col-md-3 col-sm-6">
+                                <div class="service-single">
+                                    <span class="bg-text">01</span>
+                                    <div class="serv-icon">
+                                        <img src="assets/img/icon-map-marker.png" class="img-responsive" alt="">
+                                    </div>
+                                    <h4>Lorem ipsum</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper sagittis
+                                        enim, a sodales
+                                        enim maximus ac.</p>
+                                </div>
+                            </div>
+                            <!--end service single-->
+                            <!--start service single-->
+                            <div class="col-md-3 col-sm-6">
+                                <div class="service-single">
+                                    <span class="bg-text">02</span>
+                                    <div class="serv-icon">
+                                        <img src="assets/img/icon-ticket.png" class="img-responsive" alt="">
+                                    </div>
+                                    <h4>Lorem ipsum</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper sagittis
+                                        enim, a sodales
+                                        enim maximus ac.</p>
+                                </div>
+                            </div>
+                            <!--end service single-->
+                            <!--start service single-->
+                            <div class="col-md-3 col-sm-6">
+                                <div class="service-single">
+                                    <span class="bg-text">03</span>
+                                    <div class="serv-icon">
+                                        <img src="assets/img/icon-travel.png" class="img-responsive" alt="">
+                                    </div>
+                                    <h4>Lorem ipsum</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper sagittis
+                                        enim, a sodales
+                                        enim maximus ac.</p>
+                                </div>
+                            </div>
+                            <!--end service single-->
+                            <!--start service single-->
+                            <div class="col-md-3 col-sm-6">
+                                <div class="service-single">
+                                    <span class="bg-text">04</span>
+                                    <div class="serv-icon">
+                                        <img src="assets/img/icon-briefcase.png" class="img-responsive" alt="">
+                                    </div>
+                                    <h4>Lorem ipsum</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper sagittis
+                                        enim, a sodales
+                                        enim maximus ac.</p>
+                                </div>
+                            </div>
+                            <!--end service single-->
+                            <!--start service single-->
+                            <div class="col-md-3 col-sm-6">
+                                <div class="service-single">
+                                    <span class="bg-text">05</span>
+                                    <div class="serv-icon">
+                                        <img src="assets/img/icon-house.png" class="img-responsive" alt="">
+                                    </div>
+                                    <h4>Lorem ipsum</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper sagittis
+                                        enim, a sodales
+                                        enim maximus ac.</p>
+                                </div>
+                            </div>
+                            <!--end service single-->
+                            <!--start service single-->
+                            <div class="col-md-3 col-sm-6">
+                                <div class="service-single">
+                                    <span class="bg-text">06</span>
+                                    <div class="serv-icon">
+                                        <img src="assets/img/icon-sunset.png" class="img-responsive" alt="">
+                                    </div>
+                                    <h4>Lorem ipsum</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper sagittis
+                                        enim, a sodales
+                                        enim maximus ac.</p>
+                                </div>
+                            </div>
+                            <!--end service single-->
+                            <!--start service single-->
+                            <div class="col-md-3 col-sm-6">
+                                <div class="service-single">
+                                    <span class="bg-text">07</span>
+                                    <div class="serv-icon">
+                                        <img src="assets/img/icon-passport-1.png" class="img-responsive" alt="">
+                                    </div>
+                                    <h4>Lorem ipsum</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper sagittis
+                                        enim, a sodales
+                                        enim maximus ac.</p>
+                                </div>
+                            </div>
+                            <!--end service single-->
+                            <!--start service single-->
+                            <div class="col-md-3 col-sm-6">
+                                <div class="service-single">
+                                    <span class="bg-text">08</span>
+                                    <div class="serv-icon">
+                                        <img src="assets/img/icon-passport.png" class="img-responsive" alt="">
+                                    </div>
+                                    <h4>Lorem ipsum</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper sagittis
+                                        enim, a sodales
+                                        enim maximus ac.</p>
+                                </div>
+                            </div>
+                            <!--end service single-->
+                        </div>
+                    </div>
+                    <!--end tab content single-->
+
+
+                </div>
+                <!--end tab content-->
+            </div>
+        </div>
+    </div>
+</section>
+<!--end passport process area-->
+
+<!--start location area-->
+<section id="location-area">
+    <div id="location-carousel">
+        <!--start location single-->
+        <div class="location-single">
+            <img src="http://via.placeholder.com/287x224" class="img-responsive" alt="">
+            <div class="location-overlay">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <h4 class="text-white">Lorem ipsum</h4>
+                        <a href="#">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end location single-->
+
+        <!--start location single-->
+        <div class="location-single">
+            <img src="http://via.placeholder.com/287x224" class="img-responsive" alt="">
+            <div class="location-overlay">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <h4 class="text-white">Lorem ipsum</h4>
+                        <a href="#">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end location single-->
+
+        <!--start location single-->
+        <div class="location-single">
+            <img src="http://via.placeholder.com/287x224" class="img-responsive" alt="">
+            <div class="location-overlay">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <h4 class="text-white">Lorem ipsum</h4>
+                        <a href="#">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end location single-->
+
+        <!--start location single-->
+        <div class="location-single">
+            <img src="http://via.placeholder.com/287x224" class="img-responsive" alt="">
+            <div class="location-overlay">
+                <div class="d-table">
+                    <div class="d-table-cell align-middle">
+                        <h4 class="text-white">Lorem ipsum</h4>
+                        <a href="#">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end location single-->
+
+        <!--start location single-->
+        <div class="location-single">
+            <img src="http://via.placeholder.com/287x224" class="img-responsive" alt="">
+            <div class="location-overlay">
+                <div class="d-table">
+                    <div class="d-table-cell align-middle">
+                        <h4 class="text-white">Lorem ipsum</h4>
+                        <a href="#">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end location single-->
+
+        <!--start location single-->
+        <div class="location-single">
+            <img src="http://via.placeholder.com/287x224" class="img-responsive" alt="">
+            <div class="location-overlay">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <h4 class="text-white">Lorem ipsum</h4>
+                        <a href="#">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end location single-->
+
+        <!--start location single-->
+        <div class="location-single">
+            <img src="http://via.placeholder.com/287x224" class="img-responsive" alt="">
+            <div class="location-overlay">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <h4 class="text-white">Lorem ipsum</h4>
+                        <a href="#">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end location single-->
+
+        <!--start location single-->
+        <div class="location-single">
+            <img src="http://via.placeholder.com/287x224" class="img-responsive" alt="">
+            <div class="location-overlay">
+                <div class="d-table">
+                    <div class="d-table-cell align-middle">
+                        <h4 class="text-white">Lorem ipsum</h4>
+                        <a href="#">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end location single-->
+
+        <!--start location single-->
+        <div class="location-single">
+            <img src="http://via.placeholder.com/287x224" class="img-responsive" alt="">
+            <div class="location-overlay">
+                <div class="d-table">
+                    <div class="d-table-cell align-middle">
+                        <h4 class="text-white">Lorem ipsum</h4>
+                        <a href="#">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end location single-->
+
+    </div>
+</section>
+<!--end location area-->
+<app-contact></app-contact>
+<app-footer></app-footer>
+
+<!-- mapsjs-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc3mIx6dm3j6euaZkmmuafct-mpsBlvyY&callback=loadMap"></script>

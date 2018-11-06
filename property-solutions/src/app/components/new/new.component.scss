@@ -1,13 +1,18 @@
 @import "../../../variables.scss";
 
 .new {
-    min-height: 200px;
-    max-height: 200px;
+    // min-height: 200px;
+    // max-height: 200px;
     background: #FFFFFF;
-    padding: 20px;
+    // padding: 20px;
     // overflow: hidden;
-    text-overflow: ellipsis;
-    word-wrap: break-word;
+    // text-overflow: ellipsis;
+    // word-wrap: break-word;
+
+    &:hover {
+        background: red;
+        cursor: pointer;
+    }
 
     p, h1, h4 {
         padding: 5px 0px;
@@ -18,7 +23,7 @@
         text-transform: uppercase;
     }
 
-    h1 {
+    .card-title {
         font-weight: 900;
         color: $main-color;
         text-transform: capitalize;

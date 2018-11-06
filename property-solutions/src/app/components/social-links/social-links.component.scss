@@ -1,0 +1,24 @@
+
+.social-links {
+    position: fixed!important;
+    right: 10px;
+    display: flex;
+    z-index: 9999;
+    top: 0;
+    height: 100vh;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+
+    ul {
+        background: rgba(0, 0, 0, .6);
+        padding: 15px;
+        margin: 5px 0px;
+        border-radius: 30px;
+
+        li a {
+            color: #FFF;
+            font-size: 1.2em;
+        }
+    }
+}

@@ -10,12 +10,31 @@ export class DisplayDataComponent implements OnInit, OnDestroy, OnChanges {
   @Input() data: any;
   @Input() type: any;
 
+  public contents: any[];
+  public pagination: any;
+
   // private parentObservable: Subscriber;
 
   constructor() { }
 
 
-  ngOnChanges(cahges: SimpleChanges) {
+  ngOnChanges(changes: SimpleChanges) {
+
+    const contents = changes.data;
+
+    if (contents && contents.previousValue !== contents.currentValue) {
+
+      if (contents.currentValue.data.length > 0) {
+        this.contents = contents.currentValue.data;
+        this.pagination = contents.currentValue.meta.pagination;
+
+      } else {
+        this.contents = [];
+        this.pagination = null;
+
+      }
+
+    }
 
   }
 

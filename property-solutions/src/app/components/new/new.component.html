@@ -1,5 +1,16 @@
-<div class="new">
-  <p>category</p>
-  <h1>title title title title title title title title title title title title</h1>
-  <h4>{{createText('text '.repeat(150))}}</h4>
+<div class="card new">
+  <!-- <img class="card-img-top img-fluid" src="//placehold.it/800x560" alt="Card image cap"> -->
+  <div class="card-body">
+    <h4 class="card-title">{{new.title | titlecase}}</h4>
+    <p class="card-text">{{createText(new.text) | titlecase}}</p>
+    <blockquote class="card-blockquote">
+      <footer>
+        <a>
+          <small class="text-muted">
+            Originalmente publicado em <cite title="Source Title">{{new.url}}</cite>
+          </small>
+        </a>
+      </footer>
+    </blockquote>
+  </div>
 </div>
