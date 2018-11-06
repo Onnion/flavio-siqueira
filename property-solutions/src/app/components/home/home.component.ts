@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Subject } from 'rxjs';
+import { ContentsService } from 'src/app/services/contents/contents.service';
+import { Menu } from 'src/app/models/menu.model';
 
 @Component({
   selector: 'app-home',
@@ -8,13 +9,26 @@ import { Subject } from 'rxjs';
 })
 export class HomeComponent implements OnInit {
 
-  private displayDataEmitter: Subject<any>;
+  public loading = false;
+  public data: any;
+  public type: Menu;
 
-  constructor() { }
+  constructor(private contentService: ContentsService) { }
 
 
-  public loadData($event: 'news'|'videos'|'articles'|'decisions'): void {
-    this.displayDataEmitter.next($event);
+  public loadData($event: Menu): void {
+    this.loading = true;
+    this.type = $event;
+    this.contentService.get($event.value).subscribe(
+      (contents: any) => {
+        this.loading = false;
+        this.data = contents;
+      },
+      (error) => {
+        this.loading = false;
+
+      }
+    );
   }
 
 

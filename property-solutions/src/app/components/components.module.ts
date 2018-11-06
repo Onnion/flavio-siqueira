@@ -6,17 +6,20 @@ import { HomeComponent } from './home/home.component';
 import { LoadingComponent } from './loading/loading.component';
 import { DisplayDataComponent } from './display-data/display-data.component';
 import { MatProgressSpinnerModule } from '@angular/material';
+import { NewComponent } from './new/new.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    MatProgressSpinnerModule  ],
+    MatProgressSpinnerModule
+  ],
   declarations: [
     AppComponent,
     MenuComponent,
     HomeComponent,
     LoadingComponent,
-    DisplayDataComponent
+    DisplayDataComponent,
+    NewComponent
   ]
 })
 export class ComponentsModule { }

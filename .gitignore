@@ -38,7 +38,7 @@ jspm_packages/
 
 #gulp
 gulp/
-index.html
+/index.html
 midia/
 
 # TypeScript v1 declaration files
