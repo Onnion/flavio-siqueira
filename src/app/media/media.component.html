@@ -1,0 +1,7 @@
+<app-menu (selectMenu)="loadData($event)"></app-menu>
+
+<div class="main-wraper">
+    <app-loading [loading]="loading"></app-loading>
+    <app-media-header [type]="type"></app-media-header>
+    <app-display-data [type]="type" [data]="data"></app-display-data>
+</div>

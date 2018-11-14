@@ -1,0 +1,99 @@
+/*-------------------------------------------------------------------------------------
+    Contact Area 
+---------------------------------------------------------------------------------------*/
+
+#contact-area {
+    padding: 60px 0 0;
+    /* background-color: #2e383a; */
+    position: relative
+}
+#contact-area .section-heading h6 {
+    margin-bottom: 16px;
+}
+
+#contact-area .section-heading {
+    padding-bottom: 60px;
+}
+.contact-form {
+    border-radius: 6px;
+    background-color: rgb(50, 61, 63);
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    padding: 40px 40px 40px;
+}
+
+.contact-form h5 {
+    color: #c6c6c6;
+    font-size: 20px;
+}
+
+.contact-form h4 {
+    font-weight: 700;
+    font-family: 'Merriweather', serif;
+    margin: 0 0 50px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form input:focus,
+.contact-form select:focus {
+    height: 55px !important;
+    border: 1px solid #475153;
+    background-color: transparent;
+    color: #aeb3b4;
+}
+
+.contact-form textarea,
+.contact-form textarea:focus {
+    background-color: transparent;
+    border: 1px solid #475153;
+    height: 95px;
+}
+
+.contact-btn button {
+    background-color: #d7a56e;
+    border: 0;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 15px 0 0;
+}
+
+.contact-info-single h4 {
+    font-weight: 700;
+    font-family: 'Merriweather', serif;
+}
+
+.contact-info-single p {
+    color: #636363;
+}
+
+.contact-info .border {
+    border: 1px solid #485254 !important;
+    background-color: #485254;
+}
+
+.contact-info {
+    padding: 0 0 70px;
+}
+
+.company-info {
+    background-color: #242e30;
+}
+.contact-info-separator {
+    border-bottom: 1px solid #485254;
+    max-width: 70%;
+    margin: 0 auto;
+    padding-bottom: 26px;
+    margin-bottom: 35px;
+}
+
+@media(max-width: 991px) {
+
+    .contact-form {
+        border-radius: 0;
+        position: initial;
+    }
+}

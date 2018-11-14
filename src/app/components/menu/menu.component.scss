@@ -1,0 +1,64 @@
+@import "../../../assets/sass/paper-kit/variables";
+.media-menu {
+    background: #FFFFFF;
+    width: 150px;
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    flex-direction: column;
+    z-index: 9;
+    transition: 0.3s all;
+
+
+    &.menu-closed{
+        transform: translateX(-150px);
+        transition: 0.3s all;
+    }
+    
+    div {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        vertical-align: middle;
+        align-items: center;
+        width: 100%;
+    }
+    .content-type {
+        cursor: pointer;
+
+        div {
+            color: #FFFFFF;
+            display: block;
+        }
+
+        div i {
+            font-size: 2em!important;
+        
+        }
+
+        div i,
+        div p {
+            color: #a9a9a9;
+            font-size: 1.4em;
+        
+        }
+
+        &.active {
+            background: $main-color;
+
+            div i,
+            div p {
+                color: #FFFFFF;
+            }
+
+        }
+    
+    }
+
+}
+    

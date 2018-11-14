@@ -1,0 +1,11 @@
+.main-wraper {
+    padding-left: 150px;
+    min-height: 100vh;
+    position: relative;
+    transition: 0.3s all;
+
+    &.menu-closed{
+        padding-left: 0!important;
+        transition: 0.3s all;
+    }
+}
