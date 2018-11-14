@@ -1,7 +1,9 @@
 <div class="container-fluid sticky">
-  <div class="row">
-    <div class="col-12">
-      <h1>{{type.label}}</h1>
-    </div>
+  <div>
+    <p>{{type.label}}</p>
+    <form (keyup.enter)="submit()" [formGroup]="form" (submit)="submit()">
+      <input type="text" formControlName="search" id="search">
+
+    </form>
   </div>
 </div>

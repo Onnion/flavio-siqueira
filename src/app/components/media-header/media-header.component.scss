@@ -1,8 +1,31 @@
+@import "../../../assets/sass/paper-kit/variables";
+
 .sticky {
+    height: $media-header-height;
     position: sticky;
     z-index: 999;
     top: 0;
     background: #FFFFFF;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
     box-shadow: 0 5px 15px -8px rgba(0, 0, 0, 0.15);
 
+    p {
+        margin: 0;
+        float: left;
+    }
+
+    #search {
+        float: right;
+        right: 15px;
+        background: #757575;
+        border-radius: 15px;
+        outline: none;
+        position: absolute;
+        color: #FFFFFF;
+        font-weight: 900;
+        border: none;
+        padding: 5px 0px 5px 15px;
+    }
 }

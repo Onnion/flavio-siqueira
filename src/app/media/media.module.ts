@@ -7,11 +7,14 @@ import { LoadingComponent } from 'app/components/loading/loading.component';
 import { MatProgressSpinnerModule } from '@angular/material';
 import { MediaHeaderComponent } from 'app/components/media-header/media-header.component';
 import { MenuComponent } from 'app/components/menu/menu.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     MediaComponent,
