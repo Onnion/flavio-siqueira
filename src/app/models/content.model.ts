@@ -4,11 +4,15 @@ interface User {
 }
 
 interface ContentType {
-    id: null;
-    name: null;
+    id: number;
+    name: string;
 }
 
-export interface New {
+interface Category {
+    id: number,
+    name: string
+}
+export interface Content {
     content_type: ContentType;
     created_at: string;
     id: 1;
@@ -17,4 +21,5 @@ export interface New {
     updated_at: string;
     url: string;
     user: User;
+    category: Category;
 }

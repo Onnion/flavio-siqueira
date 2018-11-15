@@ -27,5 +27,17 @@
         font-weight: 900;
         border: none;
         padding: 5px 0px 5px 15px;
+        &::placeholder {
+            color: #FFFFFF;
+            opacity: 1; /* Firefox */
+        }
+        
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+           color: #FFFFFF;
+        }
+        
+        &::-ms-input-placeholder { /* Microsoft Edge */
+           color: #FFFFFF;
+        }
     }
 }

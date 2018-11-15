@@ -2,7 +2,7 @@
   <div>
     <p>{{type.label}}</p>
     <form (keyup.enter)="submit()" [formGroup]="form" (submit)="submit()">
-      <input type="text" formControlName="search" id="search">
+      <input type="text" placeholder="Pesquisar" formControlName="search" id="search">
 
     </form>
   </div>

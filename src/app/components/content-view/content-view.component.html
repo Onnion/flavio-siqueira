@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12" *ngIf="content">
+      <h1 class="title">{{content.title}}</h1>
+
+      <p class="text-left date_published">
+        <i class="fa fa-calendar-plus-o" aria-hidden="true"></i>
+        {{content.created_at}} |
+        <i class="fa fa-tag text-right" aria-hidden="true"></i>
+        <span>{{content.category.name}}</span>
+      </p>
+
+      <br>
+
+      <div class="text" innerHtml="{{content.text}}"></div>
+
+      <br>
+
+      <p class="date_published">
+        Texto publicado originalmente em
+        <a href="{{content.url}}" target="_blank">{{getUrlText(content.url)}}</a>
+      </p>
+
+    </div>
+  </div>
+
+</div>

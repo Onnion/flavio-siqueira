@@ -1,14 +1,15 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { New } from '../../models/new.model';
+import { Content } from '../../models/content.model';
 
 @Component({
-  selector: 'app-new',
-  templateUrl: './new.component.html',
-  styleUrls: ['./new.component.scss']
+  selector: 'app-content',
+  templateUrl: './content.component.html',
+  styleUrls: ['./content.component.scss']
 })
-export class NewComponent implements OnInit {
+export class ContentComponent implements OnInit {
 
-  @Input() new: New;
+  @Input() content: Content;
+  @Input() type: any;
 
   constructor() { }
 

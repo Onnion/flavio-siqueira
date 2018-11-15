@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-12">
             <div class="card-columns">
-                <app-new *ngFor="let content of contents" [new]="content"></app-new>
+                <app-content *ngFor="let content of contents" [type]="type" [content]="content"></app-content>
             </div>
         </div>
     </div>

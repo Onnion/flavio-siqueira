@@ -8,7 +8,9 @@ import { MediaComponent } from './media/media.component';
 const routes: Routes = [
 
     { path: '', component: HomeComponent  },
-    { path: 'midia', component: MediaComponent }
+    { path: 'midia', component: MediaComponent },
+    { path: 'midia/:type/:id/:title', component: MediaComponent }
+
 ];
 
 @NgModule({

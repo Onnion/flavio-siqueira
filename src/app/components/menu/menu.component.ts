@@ -10,10 +10,10 @@ export class MenuComponent implements OnInit {
 
   public selected: 'news'|'videos'|'articles'|'decisions';
   public menuItens: Menu[] = [
-    {value: 'news', label: 'Notícias', icon: 'fa fa-newspaper'},
-    {value: 'videos', label: 'Vídeos', icon: 'fab fa-youtube'},
-    {value: 'articles', label: 'Artigos', icon: 'fa fa-newspaper'},
-    {value: 'decisions', label: 'Decisões', icon: 'fa fa-newspaper'}
+    {min: 'noticia', value: 'news', label: 'Notícias', icon: 'fa fa-newspaper'},
+    {min: 'video', value: 'videos', label: 'Vídeos', icon: 'fab fa-youtube'},
+    {min: 'artigo', value: 'articles', label: 'Artigos', icon: 'fa fa-newspaper'},
+    {min: 'decisao', value: 'decisions', label: 'Decisões', icon: 'fa fa-newspaper'}
   ];
 
 

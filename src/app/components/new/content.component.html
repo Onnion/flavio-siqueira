@@ -1,13 +1,13 @@
-<div class="card new">
+<div class="card new" [routerLink]="['/midia', type.min, content.id, content.title]">
   <!-- <img class="card-img-top img-fluid" src="//placehold.it/800x560" alt="Card image cap"> -->
   <div class="card-body">
-    <h4 class="card-title">{{new.title | titlecase}}</h4>
-    <p class="card-text">{{createText(new.text) | titlecase}}</p>
+    <h4 class="card-title">{{content.title | titlecase}}</h4>
+    <p class="card-text">{{createText(content.text) | titlecase}}</p>
     <blockquote class="card-blockquote">
       <footer>
         <a>
           <small class="text-muted">
-            Originalmente publicado em <cite title="Source Title">{{new.url}}</cite>
+            Originalmente publicado em <cite title="Source Title">{{content.url}}</cite>
           </small>
         </a>
       </footer>

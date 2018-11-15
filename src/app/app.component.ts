@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
 
 
     public modeMidia(): boolean {
-        const snap = this.router.url.substring(1);
+        const snap = this.router.url.substring(1, 6);
         return snap === 'midia';
     }
 
@@ -49,7 +49,7 @@ export class AppComponent implements OnInit {
         this._router = this.router.events.filter(event => event instanceof NavigationEnd).subscribe((event: NavigationEnd) => {
             if (window.outerWidth > 991) {
                 window.document.children[0].scrollTop = 0;
-            }else{
+            } else {
                 window.document.activeElement.scrollTop = 0;
             }
             this.navbar.sidebarClose();
