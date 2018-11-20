@@ -13,7 +13,7 @@ export class ContentsService {
 
 
   public get(type: 'news'|'videos'|'articles'|'decisions'): Observable<any> {
-    return this.http.get(`${this.API_URL}/contents/${type}`);
+    return this.http.get(`${this.API_URL}/${type}`);
 
   }
 

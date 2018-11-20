@@ -1,6 +1,6 @@
 <div class="container-fluid sticky">
   <div>
-    <p>{{type.label}}</p>
+    <p *ngIf="type">{{type.label}}</p>
     <form (keyup.enter)="submit()" [formGroup]="form" (submit)="submit()">
       <input type="text" placeholder="Pesquisar" formControlName="search" id="search">
 

@@ -10,6 +10,8 @@ import { MenuComponent } from 'app/components/menu/menu.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContentViewComponent } from 'app/components/content-view/content-view.component';
 import { RouterModule } from '@angular/router';
+import { ShowVideoComponent } from 'app/components/show-video/show-video.component';
+import { ModalDirective } from 'app/directives/modal/modal.directive';
 
 @NgModule({
   imports: [
@@ -17,7 +19,8 @@ import { RouterModule } from '@angular/router';
     MatProgressSpinnerModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+
   ],
   declarations: [
     MediaComponent,
@@ -26,7 +29,9 @@ import { RouterModule } from '@angular/router';
     DisplayDataComponent,
     LoadingComponent,
     MediaHeaderComponent,
-    ContentViewComponent
+    ContentViewComponent,
+    ShowVideoComponent,
+    ModalDirective
   ]
 })
 export class MediaModule { }

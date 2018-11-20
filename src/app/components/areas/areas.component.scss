@@ -1,0 +1,111 @@
+@import "../../../assets/sass/paper-kit/variables";
+
+p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #818181;
+}
+
+.service-single {
+    margin: 0 0 40px;
+    position: relative;
+}
+
+.service-single .bg-text {
+    position: absolute;
+    top: 40px;
+    font-size: 100px;
+    line-height: 60px;
+    font-weight: 700;
+    font-family: 'Merriweather', serif;
+    color: rgba(46, 56, 58, .10);
+}
+
+.serv-icon {
+    margin: 0 0 25px;
+}
+
+.service-single h4 {
+    font-weight: 700;
+    font-family: 'Merriweather', serif;
+    transition: .3s ease-in;
+}
+
+.service-single:hover h4 {
+    color: $main-color;
+}
+/*-------------------------------------------------------------------------------------
+    Passport Types Area
+---------------------------------------------------------------------------------------*/
+
+#passport-process-area {
+    padding: 118px 0 120px 0;
+}
+
+#passport-process-area .nav-tabs {
+    margin: 0 0 40px;
+    border-bottom: 0
+}
+
+#passport-process-area .nav-tabs li.active a {
+    background-color: #fff;
+    border-color: $main-color;
+    color: $main-color;
+    border-radius: 30px;
+    padding: 12px 18px;
+}
+
+#passport-process-area .nav-tabs li a {
+    color: #b8b2ac;
+    border-radius: 30px;
+    padding: 12px 18px;
+    margin: 0 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+}
+
+#passport-process-area .nav-tabs li a:hover {
+    background-color: $main-color;
+    border-color: $main-color;
+    color: #fff;
+}
+
+#passport-process-area .section-heading {
+    padding-bottom: 70px;
+}
+
+#passport-process-area .section-heading h6 {
+    margin-bottom: 15px;
+}
+
+.nav-tabs>li,
+.nav-pills>li {
+    float: none;
+    display: inline-block;
+}
+
+.nav-tabs,
+.nav-pills {
+    text-align: center;
+}
+
+.passport-content {
+    padding: 40px 0 0;
+}
+
+.passport-content h6 {
+    color: $main-color;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.passport-content h3 {
+    font-weight: 700;
+    font-family: 'Merriweather', serif;
+    margin: 0 0 35px;
+    font-size: 48px;
+    line-height: 58px;
+}

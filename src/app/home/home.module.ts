@@ -8,6 +8,7 @@ import { HomeComponent } from './home.component';
 
 import { AboutComponent } from 'app/components/about/about.component';
 import { ContactComponent } from 'app/components/contact/contact.component';
+import { AreasComponent } from 'app/components/areas/areas.component';
 import { MapsComponent } from 'app/components/maps/maps.component';
 import { AgmCoreModule } from '@agm/core';
 
@@ -26,7 +27,9 @@ import { AgmCoreModule } from '@agm/core';
         HomeComponent,
         AboutComponent,
         ContactComponent,
-        MapsComponent
+        MapsComponent,
+        AreasComponent
+
     ],
     exports: [ HomeComponent ],
     providers: []

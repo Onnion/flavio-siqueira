@@ -3,6 +3,8 @@
 <div class="main-wraper">
     <app-loading [loading]="loading"></app-loading>
     <app-media-header [type]="type"></app-media-header>
-    <app-display-data *ngIf="!showMode"  [type]="type" [data]="data"></app-display-data>
+    <app-display-data *ngIf="!showMode"  [type]="type" [data]="data" (selectVideo)="selectVideo($event)"></app-display-data>
     <app-content-view *ngIf="showMode" [content]="content"></app-content-view>
 </div>
+
+<app-show-video *ngIf="showVideo" [video]="true" (close)="close($event)"></app-show-video>

@@ -17,6 +17,7 @@ export class MediaComponent implements OnInit {
   public mobile = false;
   public content: Content;
   public showMode = false;
+  public showVideo = false;
   private id: number;
 
   constructor(
@@ -70,14 +71,15 @@ export class MediaComponent implements OnInit {
   }
 
 
-  public loadData($event: Menu): void {
-    this.showMode = false;
+  public loadData($event: {type: Menu, click: boolean}): void {
 
-    if (!this.id) {
+    if (!this.id && $event.click) {
+      this.data = [];
+      this.showMode = false;
 
       this.loading = true;
-      this.type = $event;
-      this.contentService.get($event.value).subscribe(
+      this.type = $event.type;
+      this.contentService.get(this.type.value).subscribe(
         (contents: any) => {
           this.loading = false;
           this.data = contents;
@@ -91,6 +93,17 @@ export class MediaComponent implements OnInit {
 
       });
     }
+  }
+
+
+  public close($event: boolean): void {
+    this.showVideo = false;
+  }
+
+
+  public selectVideo($event: any): void {
+
+
   }
 
 

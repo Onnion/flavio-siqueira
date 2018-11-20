@@ -13,12 +13,14 @@ import { HomeModule } from './home/home.module';
 import { MediaModule } from './media/media.module';
 import { ContentsService } from './services/contents/contents.service';
 import { HttpClientModule } from '@angular/common/http';
+import { SocialLinksComponent } from './components/social-links/social-links.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    SocialLinksComponent
   ],
   imports: [
     BrowserModule,

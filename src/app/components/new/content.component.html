@@ -1,4 +1,4 @@
-<div class="card new" [routerLink]="['/midia', type.min, content.id, content.title]">
+<div *ngIf="type.value !== 'videos'" class="card new" [routerLink]="['/midia', type.min, content.id, content.title]">
   <!-- <img class="card-img-top img-fluid" src="//placehold.it/800x560" alt="Card image cap"> -->
   <div class="card-body">
     <h4 class="card-title">{{content.title | titlecase}}</h4>
@@ -12,5 +12,23 @@
         </a>
       </footer>
     </blockquote>
+  </div>
+</div>
+
+<div *ngIf="type.value === 'videos'" class="card">
+  <!-- <img class="card-img-top img-fluid" src="//placehold.it/800x560" alt="Card image cap"> -->
+  <div class="">
+    <img src="{{content.thumbnail}}" class="img-fluid" alt="">
+    <!-- <h4 class="card-title">{{content.title | titlecase}}</h4>
+    <p class="card-text">{{createText(content.text) | titlecase}}</p>
+    <blockquote class="card-blockquote">
+      <footer>
+        <a>
+          <small class="text-muted">
+            Originalmente publicado em <cite title="Source Title">{{content.url}}</cite>
+          </small>
+        </a>
+      </footer>
+    </blockquote> -->
   </div>
 </div>

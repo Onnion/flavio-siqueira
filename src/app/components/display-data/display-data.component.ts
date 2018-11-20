@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, OnDestroy, OnChanges, SimpleChanges } from '@angular/core';
+import { Menu } from 'app/models/menu.model';
 
 @Component({
   selector: 'app-display-data',
@@ -8,7 +9,7 @@ import { Component, OnInit, Input, OnDestroy, OnChanges, SimpleChanges } from '@
 export class DisplayDataComponent implements OnInit, OnDestroy, OnChanges {
 
   @Input() data: any;
-  @Input() type: any;
+  @Input() type: Menu;
 
   public contents: any[];
   public pagination: any;
