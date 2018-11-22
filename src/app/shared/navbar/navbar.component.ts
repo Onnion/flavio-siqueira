@@ -15,39 +15,44 @@ export class NavbarComponent implements OnInit {
     }
 
 
-    ngOnInit() {
-        const navbar: HTMLElement = this.element.nativeElement;
-        this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
-    }
+    ngOnInit() {  }
 
 
     public navScroll(path): void {
         const target = <HTMLElement>document.querySelector('#' + path);
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        this.sidebarClose();
+
     }
 
 
     sidebarOpen() {
-        const toggleButton = this.toggleButton;
         const html = document.getElementsByTagName('html')[0];
-        // console.log(html);
-        // console.log(toggleButton, 'toggle');
 
         setTimeout(function () {
-            toggleButton.classList.add('toggled');
-        }, 500);
-        html.classList.add('nav-open');
+            const toggleButton = document.getElementById('navbarToggler');
+            toggleButton.classList.remove('collapse');
 
+        }, 200);
+
+        html.classList.add('nav-open');
         this.sidebarVisible = true;
     };
 
 
     sidebarClose() {
+
         const html = document.getElementsByTagName('html')[0];
-        // console.log(html);
-        this.toggleButton.classList.remove('toggled');
-        this.sidebarVisible = false;
+
+        setTimeout(function () {
+            const toggleButton = document.getElementById('navbarToggler');
+            toggleButton.classList.add('collapse');
+
+        }, 200);
+
         html.classList.remove('nav-open');
+        this.sidebarVisible = false;
     };
 
 
