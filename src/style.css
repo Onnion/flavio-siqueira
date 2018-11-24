@@ -1,6 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
+#contact-area,
+#passport-process-area,
+#about {
+    padding-top: 118px!important;
+}
+
+
 .mat-form-field-appearance-outline .mat-form-field-outline-thick {
     color: rgba(255, 255, 255, 0.87)!important;
 }
