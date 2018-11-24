@@ -110,3 +110,10 @@ p {
     font-size: 48px;
     line-height: 58px;
 }
+
+
+@media (max-width: 767px) {
+    #passport-process-area .nav-tabs li {
+        margin-top: 25px;
+    }
+}

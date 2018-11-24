@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewChecked } from '@angular/core';
 
 @Component({
     selector: 'app-home',
@@ -6,13 +6,25 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./home.component.scss']
 })
 
-export class HomeComponent implements OnInit {
-    model = {
+export class HomeComponent implements OnInit, AfterViewChecked {
+    
+    
+    public model = {
         left: true,
         middle: false,
         right: false
     };
+
+
     constructor() { }
 
+
     ngOnInit() {}
+
+
+    ngAfterViewChecked() {
+        document.querySelector('.site-preloader').classList.add('none');
+    }
+
+
 }

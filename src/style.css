@@ -13,3 +13,43 @@
 .mat-input-element {
     color: rgb(255, 255, 255)!important;
 }
+
+.site-preloader.none {
+    display: none;
+}
+
+.site-preloader {
+    background-color: #d7a56e;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    z-index: 99999;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.site-preloader .spinner {
+    width: 60px;
+    height: 60px;
+    margin: 21% auto;
+    background-color: #fff;
+    border-radius: 100%;
+    -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+    animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+@keyframes sk-scaleout {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+        opacity: 0;
+    }
+}
