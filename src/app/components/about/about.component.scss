@@ -1,0 +1,46 @@
+/*$color1:teal;
+$cloudColor:#ecf0f1;
+
+ Double Diagonal line
+.column {
+	display: inline-block;
+	vertical-align: top;
+}
+.col-3 .column {
+	padding: 0 1%;
+	width: 33%;
+	text-align: center;
+}
+
+.col-3 .column p {
+	padding: 1.4em;
+}
+.ss-style-doublediagonal {
+	z-index: 1;
+	padding-top: 6em;
+	background: darken($color1, 11%);
+}
+
+.ss-style-doublediagonal::before,
+.ss-style-doublediagonal::after {
+	top: 0;
+	left: -25%;
+	z-index: -1;
+	width: 150%;
+	height: 75%;
+	background: inherit;
+	-webkit-transform: rotate(-2deg);
+	transform: rotate(-2deg);
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+}
+
+.ss-style-doublediagonal::before {
+	height: 50%;
+	background: darken($color1, 15%);
+	-webkit-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+	-webkit-transform-origin: 3% 0;
+	transform-origin: 3% 0;
+}
+ */

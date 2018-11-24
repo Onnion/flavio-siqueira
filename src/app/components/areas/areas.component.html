@@ -13,7 +13,7 @@
         <div class="row">
             <div role="tabpanel">
                 <!--start tab menu-->
-                <ul class="nav nav-tabs" role="tablist">
+                <ul class="nav nav-tabs" role="tablist" style="justify-content: center;">
                     <li *ngFor="let area of areas" role="presentation" (click)="selectArea(area.id)" [class.active]="area.id === areaSelected">
                         <a style="cursor: pointer;" role="tab" data-toggle="tab">
                             {{area.label}}
@@ -32,7 +32,7 @@
                                     <div class="service-single">
                                         <span class="bg-text">{{(i + 1).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})}}</span>
                                         <div class="serv-icon">
-                                            <img src="assets/img/icon-map-marker.png" class="img-responsive" alt="">
+                                            <img src="assets/img/enterprise.svg" class="img-responsive" style="width: 71px;" alt="">
                                         </div>
                                         <!-- <h4>{{data}}</h4> -->
                                         <p>{{data | titlecase}}</p>

@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.mat-form-field-appearance-outline .mat-form-field-outline-thick {
+    color: rgba(255, 255, 255, 0.87)!important;
+}
+
+.mat-form-field-label{
+    color: rgba(255, 255, 255, 0.6)!important;
+}
+
+
+.mat-input-element {
+    color: rgb(255, 255, 255)!important;
+}

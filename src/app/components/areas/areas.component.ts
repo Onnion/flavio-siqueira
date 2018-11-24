@@ -1,15 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { bounceIn } from 'app/helpers/animations/animations';
 
 @Component({
   selector: 'app-areas',
   templateUrl: './areas.component.html',
-  styleUrls: ['./areas.component.scss'],
-  animations: [bounceIn]
+  styleUrls: ['./areas.component.scss']
 })
 export class AreasComponent implements OnInit {
 
-  public areaSelected = 'property';
+  public areaSelected = 'legal-permits';
   public areas = [
     {
       id: 'property',

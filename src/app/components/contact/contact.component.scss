@@ -4,7 +4,7 @@
 
 #contact-area {
     padding: 60px 0 0;
-    /* background-color: #2e383a; */
+    // background-color: #2e383a;
     position: relative
 }
 #contact-area .section-heading h6 {
@@ -33,22 +33,22 @@
     margin: 0 0 50px;
 }
 
-.contact-form input,
-.contact-form select,
-.contact-form input:focus,
-.contact-form select:focus {
-    height: 55px !important;
-    border: 1px solid #475153;
-    background-color: transparent;
-    color: #aeb3b4;
-}
+// .contact-form input,
+// .contact-form select,
+// .contact-form input:focus,
+// .contact-form select:focus {
+//     height: 55px !important;
+//     border: 1px solid #475153;
+//     background-color: transparent;
+//     color: #aeb3b4;
+// }
 
-.contact-form textarea,
-.contact-form textarea:focus {
-    background-color: transparent;
-    border: 1px solid #475153;
-    height: 95px;
-}
+// .contact-form textarea,
+// .contact-form textarea:focus {
+//     background-color: transparent;
+//     border: 1px solid #475153;
+//     height: 95px;
+// }
 
 .contact-btn button {
     background-color: #d7a56e;
@@ -96,4 +96,8 @@
         border-radius: 0;
         position: initial;
     }
+}
+
+.mat-form-field {
+    width: 100%!important;
 }

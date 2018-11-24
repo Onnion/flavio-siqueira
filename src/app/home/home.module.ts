@@ -11,6 +11,9 @@ import { ContactComponent } from 'app/components/contact/contact.component';
 import { AreasComponent } from 'app/components/areas/areas.component';
 import { MapsComponent } from 'app/components/maps/maps.component';
 import { AgmCoreModule } from '@agm/core';
+import { MatFormFieldModule, MatInputModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaskDirective } from 'app/directives/mask/mask.directive';
 
 @NgModule({
     imports: [
@@ -19,17 +22,20 @@ import { AgmCoreModule } from '@agm/core';
         FormsModule,
         ReactiveFormsModule,
         RouterModule,
+        MatFormFieldModule,
+        MatInputModule,
+        BrowserAnimationsModule,
         AgmCoreModule.forRoot({
             apiKey: 'AIzaSyAc3mIx6dm3j6euaZkmmuafct-mpsBlvyY'
-          })
+        })
     ],
     declarations: [
         HomeComponent,
         AboutComponent,
         ContactComponent,
         MapsComponent,
-        AreasComponent
-
+        AreasComponent,
+        MaskDirective
     ],
     exports: [ HomeComponent ],
     providers: []
