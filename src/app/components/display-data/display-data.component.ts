@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnDestroy, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy, OnChanges, SimpleChanges, EventEmitter, Output } from '@angular/core';
 import { Menu } from 'app/models/menu.model';
 
 @Component({
@@ -10,6 +10,7 @@ export class DisplayDataComponent implements OnInit, OnDestroy, OnChanges {
 
   @Input() data: any;
   @Input() type: Menu;
+  @Output() selectVideo: EventEmitter<any> = new EventEmitter<any>()
 
   public contents: any[];
   public pagination: any;
@@ -35,6 +36,11 @@ export class DisplayDataComponent implements OnInit, OnDestroy, OnChanges {
 
     }
 
+  }
+
+
+  public select($event: any): void {
+    this.selectVideo.emit($event);
   }
 
 

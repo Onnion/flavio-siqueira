@@ -24,7 +24,7 @@ export class ShowVideoComponent implements OnInit {
 
   ngOnInit() {
     // tslint:disable-next-line:max-line-length
-    this.frame = this.sanitized.bypassSecurityTrustHtml("<iframe width='560' height='315' src='https://www.youtube.com/embed/ObFCG8xI9u8' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
+    this.frame = this.sanitized.bypassSecurityTrustHtml(this.video.embed);
   }
 
 }

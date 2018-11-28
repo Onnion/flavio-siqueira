@@ -26,8 +26,8 @@ export class ContentViewComponent implements OnInit, OnDestroy {
   ngOnInit() {
     if (this.content) {
       // this.meta.updateTag({ name: 'og:image', content: 'http://via.placeholder.com/211x50' });
-      this.meta.updateTag({ name: 'og:title', content: this.content.title });
-      this.title.setTitle(`Property Solutions - ${this.content.title}`)
+      this.meta.updateTag({ name: 'og:title', content: `Property Solutions | ${this.content.title}` });
+      this.title.setTitle(`Property Solutions | ${this.content.title}`)
     }
   }
 

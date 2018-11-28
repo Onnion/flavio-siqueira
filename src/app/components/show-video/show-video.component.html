@@ -1,6 +1,8 @@
 <div modal>
-  <div style="display: blocl;">
-      <button (click)="closeVideo()"> FECHAR </button>
+  <div class="video-container">
+      <!-- <button (click)="closeVideo()"> FECHAR </button> -->
+      <button mat-mini-fab (click)="closeVideo()"><i class="fa fa-close"></i></button>
+
       <div [innerHtml]="frame"></div>
 
   </div>

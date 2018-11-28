@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-12">
             <div class="card-columns">
-                <app-content *ngFor="let content of contents" [type]="type" [content]="content"></app-content>
+                <app-content *ngFor="let content of contents" (selectVideo)="select($event)" [type]="type" [content]="content"></app-content>
             </div>
         </div>
     </div>

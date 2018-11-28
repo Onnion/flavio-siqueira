@@ -7,4 +7,4 @@
     <app-content-view *ngIf="showMode && content" [content]="content"></app-content-view>
 </div>
 
-<app-show-video *ngIf="showVideo" [video]="true" (close)="close($event)"></app-show-video>
+<app-show-video *ngIf="showVideo" [video]="video" (close)="close($event)"></app-show-video>

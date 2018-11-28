@@ -4,7 +4,7 @@ import { MediaComponent } from './media.component';
 import { ContentComponent } from 'app/components/new/content.component';
 import { DisplayDataComponent } from 'app/components/display-data/display-data.component';
 import { LoadingComponent } from 'app/components/loading/loading.component';
-import { MatProgressSpinnerModule } from '@angular/material';
+import { MatProgressSpinnerModule, MatButtonModule } from '@angular/material';
 import { MediaHeaderComponent } from 'app/components/media-header/media-header.component';
 import { MenuComponent } from 'app/components/menu/menu.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -20,6 +20,7 @@ import { ModalDirective } from 'app/directives/modal/modal.directive';
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
+    MatButtonModule
 
   ],
   declarations: [

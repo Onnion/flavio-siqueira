@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Content } from '../../models/content.model';
 
 @Component({
@@ -8,8 +8,9 @@ import { Content } from '../../models/content.model';
 })
 export class ContentComponent implements OnInit {
 
-  @Input() content: Content;
+  @Input() content: any;
   @Input() type: any;
+  @Output() selectVideo: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() { }
 
@@ -22,6 +23,11 @@ export class ContentComponent implements OnInit {
     }
 
     return preview;
+  }
+
+
+  public select(): void {
+    this.selectVideo.emit(this.content);
   }
 
 

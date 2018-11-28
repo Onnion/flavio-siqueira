@@ -15,7 +15,7 @@
   </div>
 </div>
 
-<div *ngIf="type.value === 'videos'" class="card">
+<div *ngIf="type.value === 'videos'" class="card" (click)="select()">
   <!-- <img class="card-img-top img-fluid" src="//placehold.it/800x560" alt="Card image cap"> -->
   <div class="">
     <img src="{{content.thumbnail}}" class="img-fluid" alt="">

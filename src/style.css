@@ -1,7 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
-html, body {
+html,
+body {
     overflow-x: hidden;
 }
 
@@ -9,21 +10,21 @@ html, body {
 #passport-process-area,
 #about,
 #more-info {
-    padding-top: 118px!important;
+    padding-top: 118px !important;
 }
 
 
 .mat-form-field-appearance-outline .mat-form-field-outline-thick {
-    color: rgba(255, 255, 255, 0.87)!important;
+    color: rgba(255, 255, 255, 0.87) !important;
 }
 
-.mat-form-field-label{
-    color: rgba(255, 255, 255, 0.6)!important;
+.mat-form-field-label {
+    color: rgba(255, 255, 255, 0.6) !important;
 }
 
 
 .mat-input-element {
-    color: rgb(255, 255, 255)!important;
+    color: rgb(255, 255, 255) !important;
 }
 
 .site-preloader.none {
@@ -59,6 +60,7 @@ html, body {
         -webkit-transform: scale(0);
         transform: scale(0);
     }
+
     100% {
         -webkit-transform: scale(1.0);
         transform: scale(1.0);
@@ -67,25 +69,32 @@ html, body {
 }
 
 
-.new div p, 
-.new div h1, 
-.new div h2, 
-.new div h3, 
-.new div h4, 
+.new div p,
+.new div h1,
+.new div h2,
+.new div h3,
+.new div h4,
 .new div h6,
-.new div i, 
-.new div a, 
-.new div span, 
-.new div b, 
+.new div i,
+.new div a,
+.new div span,
+.new div b,
 .new div font {
-    text-transform: uppercase!important;
-    text-decoration: none!important;
-    color: #000000!important;
-    font-style: normal!important;
-    font-weight: 300!important;
-        
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    color: #000000 !important;
+    font-style: normal !important;
+    font-weight: 300 !important;
+
 }
 
 .new div img {
     display: none;
+}
+
+@media (max-width: 560px) {
+    .video-container iframe {
+        width: 100% !important;
+    }
+
 }

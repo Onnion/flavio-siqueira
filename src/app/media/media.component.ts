@@ -19,6 +19,7 @@ export class MediaComponent implements OnInit, AfterViewChecked {
   public content: Content;
   public showMode = false;
   public showVideo = false;
+  public video: any;
   private id: number;
 
 
@@ -107,7 +108,8 @@ export class MediaComponent implements OnInit, AfterViewChecked {
 
 
   public selectVideo($event: any): void {
-
+    this.showVideo = true;
+    this.video = $event;
 
   }
 
