@@ -5,7 +5,7 @@ import { Content } from 'app/models/content.model';
 
 @Injectable()
 export class ContentsService {
-  private API_URL = 'http://api.propertysolutions.com.br/api';
+  private API_URL = 'https://api.propertysolutions.com.br/api';
 
 
   constructor(private http: HttpClient) {
