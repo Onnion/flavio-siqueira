@@ -22,6 +22,16 @@ export class MediaHeaderComponent implements OnInit {
   }
 
 
+  public toogleMenu(): void {
+    const main = document.querySelector('.main-wraper');
+    const menu = document.querySelector('.media-menu');
+
+    main.classList.toggle('menu-closed');
+    menu.classList.toggle('menu-closed');
+
+  }
+
+
   public submit(): void {
     if (this.form.valid) {
       console.log(this.form.value);

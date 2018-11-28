@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, AfterViewChecked } from '@angular/core';
 import { Menu } from 'app/models/menu.model';
 import { ContentsService } from 'app/services/contents/contents.service';
 import { ActivatedRoute } from '@angular/router';
@@ -10,21 +10,22 @@ import { Content } from 'app/models/content.model';
   styleUrls: ['./media.component.scss'],
   providers: [ContentsService]
 })
-export class MediaComponent implements OnInit {
+export class MediaComponent implements OnInit, AfterViewChecked {
   public loading = false;
   public data: any;
   public type: Menu;
+  public typeSnapshop: string;
   public mobile = false;
   public content: Content;
   public showMode = false;
   public showVideo = false;
   private id: number;
 
+
   constructor(
     private contentService: ContentsService,
-    private route: ActivatedRoute
+    private active: ActivatedRoute
   ) { }
-
 
 
   @HostListener('window:resize', ['$event'])
@@ -59,19 +60,22 @@ export class MediaComponent implements OnInit {
   }
 
 
-  private loadContent(id: number): void {
+  private loadContent(type: string, id: number): void {
 
-    this.contentService.show(id).subscribe(
+    const $type: any = type === 'videos' ? type : type === 'artigos' ? 'articles' : type === 'noticias' ? 'news' : 'decisions';
+    this.typeSnapshop = $type;
+
+    this.contentService.show($type, id).subscribe(
       (content: Content) => {
         this.content = content;
       },
-      (error) => {}
+      (error) => { }
     );
 
   }
 
 
-  public loadData($event: {type: Menu, click: boolean}): void {
+  public loadData($event: { type: Menu, click: boolean }): void {
 
     if (!this.id && $event.click) {
       this.data = [];
@@ -83,6 +87,7 @@ export class MediaComponent implements OnInit {
         (contents: any) => {
           this.loading = false;
           this.data = contents;
+
         },
         (error) => {
           this.loading = false;
@@ -91,7 +96,7 @@ export class MediaComponent implements OnInit {
             meta: null
           };
 
-      });
+        });
     }
   }
 
@@ -109,14 +114,23 @@ export class MediaComponent implements OnInit {
 
   ngOnInit() {
     this.mobileMode();
-    this.id = this.route.snapshot.params['id'];
-    console.log(this.id);
-    if (this.id) {
+
+    this.id = this.active.snapshot.params['id'];
+    this.typeSnapshop = this.active.snapshot.data['type'];
+
+    if (this.typeSnapshop === 'show' && this.id) {
+      const type = this.active.snapshot.params['type'];
+
       this.showMode = true;
-      this.loadContent(this.id);
+      this.loadContent(type, this.id);
     }
 
 
+  }
+
+
+  ngAfterViewChecked() {
+    document.querySelector('.site-preloader').classList.add('none');
   }
 
 

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Content } from 'app/models/content.model';
 
@@ -13,19 +13,29 @@ export class ContentsService {
 
 
   public get(type: 'news'|'videos'|'articles'|'decisions'): Observable<any> {
-    return this.http.get(`${this.API_URL}/${type}`);
+    return new Observable((observer) => {
+      this.http.get(`${this.API_URL}/${type}`).subscribe(
+        (contents: any) => {
+          observer.next(contents);
+        },
+        (error) => {
+          observer.error(error);
+
+        }
+      );
+    });
 
   }
 
 
-  public show(id: number): Observable<Content> {
-    return new Observable((observere) => {
-      this.http.get(`${this.API_URL}/contents/${id}`).subscribe(
+  public show(type: 'news'|'videos'|'articles'|'decisions', id: number): Observable<Content> {
+    return new Observable((observer) => {
+      this.http.get(`${this.API_URL}/${type}/${id}`).subscribe(
         (content: any) => {
-          observere.next(content.data);
+          observer.next(content.data);
         },
         (error) => {
-          observere.error(error);
+          observer.error(error);
 
         }
       );

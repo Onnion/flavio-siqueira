@@ -1,9 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
+html, body {
+    overflow-x: hidden;
+}
+
 #contact-area,
 #passport-process-area,
-#about {
+#about,
+#more-info {
     padding-top: 118px!important;
 }
 
@@ -59,4 +64,28 @@
         transform: scale(1.0);
         opacity: 0;
     }
+}
+
+
+.new div p, 
+.new div h1, 
+.new div h2, 
+.new div h3, 
+.new div h4, 
+.new div h6,
+.new div i, 
+.new div a, 
+.new div span, 
+.new div b, 
+.new div font {
+    text-transform: uppercase!important;
+    text-decoration: none!important;
+    color: #000000!important;
+    font-style: normal!important;
+    font-weight: 300!important;
+        
+}
+
+.new div img {
+    display: none;
 }

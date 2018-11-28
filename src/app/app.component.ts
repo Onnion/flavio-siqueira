@@ -1,24 +1,41 @@
-import { Component, OnInit, Inject, Renderer, ElementRef, ViewChild, HostListener } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
-import { Subscription } from 'rxjs/Subscription';
-import 'rxjs/add/operator/filter';
-import { DOCUMENT } from '@angular/platform-browser';
+import { Component, OnInit, ElementRef, ViewChild, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { routerTransition } from './helpers/animations/animations';
+import 'rxjs/add/operator/filter';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    styleUrls: ['./app.component.scss'],
+    animations: [routerTransition]
+
 })
 export class AppComponent implements OnInit {
-    private _router: Subscription;
+
     @ViewChild(NavbarComponent) navbar: NavbarComponent;
 
     constructor(
         private router: Router,
-        @Inject(DOCUMENT) private document: any,
+        // @Inject(DOCUMENT) private document: any,
         private element: ElementRef,
-    ) {}
+        private meta: Meta
+    ) {
+
+        this.meta.addTags([
+            { name: 'description', content: 'Property Solutions' },
+            { name: 'keywords', content: '' },
+            { name: 'og:type', content: 'website' },
+            { name: 'og:image', content: 'http://via.placeholder.com/211x50' },
+            { name: 'og:image:type', content: 'image/png' },
+            { name: 'og:image:width', content: '800' },
+            { name: 'og:image:height', content: '600' },
+            { name: 'theme-color', content: '#d7a56e' },
+            { name: 'og:title', content: 'Property Solutions' },
+            { name: 'og:description', content: 'Property Solutions' }
+        ]);
+    }
 
 
     public modeMidia(): boolean {
@@ -46,14 +63,19 @@ export class AppComponent implements OnInit {
 
 
     private refactorMethod() {
-        this._router = this.router.events.filter(event => event instanceof NavigationEnd).subscribe((event: NavigationEnd) => {
-            if (window.outerWidth > 991) {
-                window.document.children[0].scrollTop = 0;
-            } else {
-                window.document.activeElement.scrollTop = 0;
-            }
-            this.navbar.sidebarClose();
+
+        this.router.events.subscribe((event) => {
+            // if (window.outerWidth > 991) {
+            //     window.document.children[0].scrollTop = 0;
+            // } else {
+            //     window.document.activeElement.scrollTop = 0;
+            // }
+            // this.navbar.sidebarClose();
+            const html = document.getElementsByTagName('html')[0];
+            html.classList.remove('nav-open');
+
         });
+
         var ua = window.navigator.userAgent;
         var trident = ua.indexOf('Trident/');
         if (trident > 0) {

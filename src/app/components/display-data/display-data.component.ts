@@ -14,8 +14,6 @@ export class DisplayDataComponent implements OnInit, OnDestroy, OnChanges {
   public contents: any[];
   public pagination: any;
 
-  // private parentObservable: Subscriber;
-
   constructor() { }
 
 
@@ -25,7 +23,7 @@ export class DisplayDataComponent implements OnInit, OnDestroy, OnChanges {
 
     if (contents && contents.previousValue !== contents.currentValue) {
 
-      if (contents.currentValue.data.length > 0) {
+      if (contents.currentValue.data && contents.currentValue.data.length > 0) {
         this.contents = contents.currentValue.data;
         this.pagination = contents.currentValue.meta.pagination;
 

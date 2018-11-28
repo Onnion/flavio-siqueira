@@ -14,7 +14,6 @@ import { MediaModule } from './media/media.module';
 import { ContentsService } from './services/contents/contents.service';
 import { HttpClientModule } from '@angular/common/http';
 import { SocialLinksComponent } from './components/social-links/social-links.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -31,8 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RouterModule,
     AppRoutingModule,
     HomeModule,
-    MediaModule,
-    // BrowserAnimationsModule
+    MediaModule
   ],
   providers: [ContentsService],
   bootstrap: [AppComponent]

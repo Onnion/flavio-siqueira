@@ -7,8 +7,8 @@ import { Component, OnInit, AfterViewChecked } from '@angular/core';
 })
 
 export class HomeComponent implements OnInit, AfterViewChecked {
-    
-    
+
+
     public model = {
         left: true,
         middle: false,
@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit, AfterViewChecked {
     constructor() { }
 
 
-    ngOnInit() {}
+    ngOnInit() { }
 
 
     ngAfterViewChecked() {

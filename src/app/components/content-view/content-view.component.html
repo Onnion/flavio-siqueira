@@ -5,7 +5,7 @@
 
       <p class="text-left date_published">
         <i class="fa fa-calendar-plus-o" aria-hidden="true"></i>
-        {{content.created_at}} |
+        {{content.created_at | date: 'dd/MM/yyyy'}} |
         <i class="fa fa-tag text-right" aria-hidden="true"></i>
         <span>{{content.category.name}}</span>
       </p>

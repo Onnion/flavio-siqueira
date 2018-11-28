@@ -1,0 +1,19 @@
+@import "../../../assets/sass/paper-kit/variables";
+
+#more-info {
+    background: #323d3f;
+    color: #ffffff!important;
+
+    .link {
+        display: block;
+
+        a {
+            color: #FFFFFF;
+    
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+    
+}

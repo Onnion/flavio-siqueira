@@ -2,7 +2,7 @@
   <!-- <img class="card-img-top img-fluid" src="//placehold.it/800x560" alt="Card image cap"> -->
   <div class="card-body">
     <h4 class="card-title">{{content.title | titlecase}}</h4>
-    <p class="card-text">{{createText(content.text) | titlecase}}</p>
+    <p class="card-text" [innerHtml]="createText(content.text)"></p>
     <blockquote class="card-blockquote">
       <footer>
         <a>

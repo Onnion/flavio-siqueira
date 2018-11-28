@@ -1,5 +1,6 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-navbar',
@@ -9,13 +10,20 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 export class NavbarComponent implements OnInit {
     private toggleButton: any;
     private sidebarVisible: boolean;
+    private mode: any;
 
-    constructor(public location: Location, private element: ElementRef) {
+
+    constructor(private router: Router, private location: Location, private element: ElementRef) {
         this.sidebarVisible = false;
     }
 
 
-    ngOnInit() {  }
+    ngOnInit() {
+        this.router.events.subscribe((val) => {
+            this.mode = this.location.path().includes('midia');
+        });
+
+     }
 
 
     public navScroll(path): void {
@@ -28,41 +36,47 @@ export class NavbarComponent implements OnInit {
 
 
     sidebarOpen() {
-        const html = document.getElementsByTagName('html')[0];
+        if (!this.mode) {
 
-        setTimeout(function () {
-            const toggleButton = document.getElementById('navbarToggler');
-            toggleButton.classList.remove('collapse');
+            const html = document.getElementsByTagName('html')[0];
 
-        }, 200);
+            setTimeout(function () {
+                const toggleButton = document.getElementById('navbarToggler');
+                toggleButton.classList.remove('collapse');
 
-        html.classList.add('nav-open');
-        this.sidebarVisible = true;
+            }, 200);
+
+            html.classList.add('nav-open');
+            this.sidebarVisible = true;
+        }
     };
 
 
     sidebarClose() {
+        if (!this.mode) {
 
-        const html = document.getElementsByTagName('html')[0];
+            const html = document.getElementsByTagName('html')[0];
 
-        setTimeout(function () {
-            const toggleButton = document.getElementById('navbarToggler');
-            toggleButton.classList.add('collapse');
+            setTimeout(function () {
+                const toggleButton = document.getElementById('navbarToggler');
+                toggleButton.classList.add('collapse');
 
-        }, 200);
+            }, 200);
 
-        html.classList.remove('nav-open');
-        this.sidebarVisible = false;
+            html.classList.remove('nav-open');
+            this.sidebarVisible = false;
+        }
     };
 
 
     sidebarToggle() {
-        // const toggleButton = this.toggleButton;
-        // const body = document.getElementsByTagName('body')[0];
-        if (this.sidebarVisible === false) {
-            this.sidebarOpen();
-        } else {
-            this.sidebarClose();
+        if (!this.mode) {
+
+            if (this.sidebarVisible === false) {
+                this.sidebarOpen();
+            } else {
+                this.sidebarClose();
+            }
         }
     };
 

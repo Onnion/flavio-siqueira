@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter, AfterViewChecked } from '@angular/core';
 import { Menu } from 'app/models/menu.model';
 import { Router } from '@angular/router';
 
@@ -7,14 +7,19 @@ import { Router } from '@angular/router';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent implements OnInit {
+export class MenuComponent implements OnInit, AfterViewChecked {
+
+  @Input() type: string;
+  @Input() mode: boolean;
+
+  private stateLoad = false;
 
   public selected: 'news'|'videos'|'articles'|'decisions';
   public menuItens: Menu[] = [
-    {min: 'artigo', value: 'articles', label: 'Artigos', icon: 'fa fa-newspaper-o'},
-    {min: 'decisao', value: 'decisions', label: 'Decisões', icon: 'fa fa-newspaper-o'},
-    {min: 'noticia', value: 'news', label: 'Notícias', icon: 'fa fa-newspaper-o'},
-    {min: 'video', value: 'videos', label: 'Vídeos', icon: 'fa fa-youtube'}
+    {min: 'artigos', value: 'articles', label: 'Artigos', icon: 'fa fa-newspaper-o'},
+    {min: 'decisoes', value: 'decisions', label: 'Decisões', icon: 'fa fa-newspaper-o'},
+    {min: 'noticias', value: 'news', label: 'Notícias', icon: 'fa fa-newspaper-o'},
+    {min: 'videos', value: 'videos', label: 'Vídeos', icon: 'fa fa-youtube'}
   ];
 
 
@@ -25,20 +30,30 @@ export class MenuComponent implements OnInit {
 
 
   public select(type: Menu, click: boolean = true): void {
-    console.log(type);
     this.selected = type.value;
 
-    if (click) {
-      this.router.navigate(['/midia']);
+    if ((!this.mode) || (this.mode && this.stateLoad)) {
+      if (click) {
+        this.router.navigate([`/midia/${type.min}`]);
 
+      }
+
+      this.selectMenu.emit({type, click});
     }
 
-    this.selectMenu.emit({type, click});
   }
 
 
   ngOnInit() {
-    this.select(this.menuItens[0], false);
+    this.select(this.menuItens.filter((menu) => menu.value === this.type)[0]);
+  }
+
+
+  ngAfterViewChecked() {
+    if (this.mode) {
+      this.stateLoad = true;
+
+    }
   }
 
 }

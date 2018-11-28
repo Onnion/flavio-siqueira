@@ -14,6 +14,7 @@ import { AgmCoreModule } from '@agm/core';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaskDirective } from 'app/directives/mask/mask.directive';
+import { MoreInfoComponent } from 'app/components/more-info/more-info.component';
 
 @NgModule({
     imports: [
@@ -35,7 +36,8 @@ import { MaskDirective } from 'app/directives/mask/mask.directive';
         ContactComponent,
         MapsComponent,
         AreasComponent,
-        MaskDirective
+        MaskDirective,
+        MoreInfoComponent
     ],
     exports: [ HomeComponent ],
     providers: []
