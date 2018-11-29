@@ -24,15 +24,42 @@
 
                 <div class="tab-content">
 
-                    <div *ngFor="let area of areas" role="tabpanel" [class.active]="area.id === areaSelected" class="tab-pane" id="{{area.id}}">
-                        <div class="container">
 
+                    <div *ngFor="let area of areas" role="tabpanel" [class.active]="area.id === areaSelected" class="tab-pane"
+                        id="{{area.id}}">
+                        <div class="container">
+                            <div class="row justify-content-center mb-5">
+                                <div class="col-12">
+
+                                   
+                                    <div class="serv-icon" style="align-items: center; display: flex;">
+                                        <img src="assets/img/enterprise.svg" class="img-responsive" style="width: 71px;"
+                                            alt="" />
+                                        <h3 style="display: inline;margin-left: 10px;font-weight: 700;">
+                                            {{area.label}}
+                                        </h3>
+                                    </div>
+                                    <div class="mission-dots">
+                                            <ul>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                            </ul>
+                                        </div>
+                                    <p class="text-justify"> {{area.resume}}</p>
+
+                                </div>
+
+                            </div>
                             <div class="row">
                                 <div *ngFor="let data of area.data; let i = index" class="col-md-3 col-sm-6">
                                     <div class="service-single">
-                                        <span class="bg-text">{{(i + 1).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})}}</span>
-                                        <div class="serv-icon">
-                                            <img src="assets/img/enterprise.svg" class="img-responsive" style="width: 71px;" alt="">
+                                        <span class="bg-text">{{(i + 1).toLocaleString('en-US', {minimumIntegerDigits:
+                                            2, useGrouping:false})}}</span>
+                                        <div class="serv-icon" style="padding-top: 20px;">
+                                            <!-- <img src="assets/img/enterprise.svg" class="img-responsive" style="width: 71px;"
+                                                alt=""> -->
                                         </div>
                                         <!-- <h4>{{data}}</h4> -->
                                         <p>{{data | titlecase}}</p>
@@ -41,7 +68,7 @@
                             </div>
                         </div>
                     </div>
-                        
+
                 </div>
                 <!--end tab content-->
             </div>

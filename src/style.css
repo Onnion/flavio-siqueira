@@ -98,3 +98,8 @@ body {
     }
 
 }
+
+.mat-progress-spinner circle, 
+.mat-spinner circle {
+    stroke: #d7a56e;
+}

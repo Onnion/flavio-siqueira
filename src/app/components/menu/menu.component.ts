@@ -19,7 +19,7 @@ export class MenuComponent implements OnInit, AfterViewChecked {
     {min: 'artigos', value: 'articles', label: 'Artigos', icon: 'fa fa-newspaper-o'},
     {min: 'decisoes', value: 'decisions', label: 'Decisões', icon: 'fa fa-newspaper-o'},
     {min: 'noticias', value: 'news', label: 'Notícias', icon: 'fa fa-newspaper-o'},
-    {min: 'videos', value: 'videos', label: 'Vídeos', icon: 'fa fa-youtube'}
+    {min: 'videos', value: 'videos', label: 'Vídeos', icon: 'fa fa-youtube red'}
   ];
 
 
