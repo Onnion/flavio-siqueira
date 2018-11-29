@@ -12,13 +12,13 @@
 
       <br>
 
-      <div class="text" innerHtml="{{content.text}}"></div>
+      <div class="text" [innerHtml]="safeContent(content.text)"></div>
 
       <br>
 
       <p class="date_published">
         Texto publicado originalmente em
-        <a href="{{content.url}}" target="_blank">{{getUrlText(content.url)}}</a>
+        <a [href]="safeContent(content.url)" target="_blank">{{safeContent(getUrlText(content.url))}}</a>
       </p>
 
     </div>

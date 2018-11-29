@@ -45,7 +45,6 @@ export class MediaComponent implements OnInit, AfterViewChecked {
       this.mobile = true;
 
       if (!menu.classList.contains(classMobile) && wraper.classList.contains(classMobile)) {
-        console.log(wraper.classList);
 
       } else {
         menu.classList.add(classMobile);

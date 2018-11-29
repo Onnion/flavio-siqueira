@@ -12,6 +12,7 @@ export class AreasComponent implements OnInit {
     {
       id: 'property',
       label: 'PROPERTY',
+      resume: 'Atuamos nas Regularizações e Legalizações de imóveis, com o objetivo de resguardar o direito de propriedade dos nossos clientes, promovendo assim uma completa valorização imobiliária, bem como uma maior tranquilidade e segurança jurídica.',
       data: [
         'regularização fundiária do imóvel: analisando e obtendo os documentos do imóvel, do vendedor ou comprador para assegurar as aquisições e vendas.',
         'Elaboração de contratos e demais instrumentos comerciais, tais como: promessas de compra e venda, permuta, doações, locação, arrendamento, escrituras diversas.',
@@ -34,6 +35,7 @@ export class AreasComponent implements OnInit {
     {
       id: 'legal-permits',
       label: 'LEGAL PERMITS',
+      resume: 'Como forma de solucionar os problemas ocasionados aos nossos clientes decorrentes de fiscalizações públicas, bem como minimizar as consequências e os custos financeiros envolvidos com a aquisição de imóveis irregulares, disponibilizamos nossos serviços de obtenção das autorizações legais.',
       data: [
         'Obtenção e Manutenção de licenças e alvarás.',
         'Aprovação de plantas e projetos para reforma ou construção.',
@@ -46,8 +48,8 @@ export class AreasComponent implements OnInit {
     {
       id: 'asset-manangement',
       label: 'ASSET MANANGEMENT',
+      resume: 'No campo gestão e administração dos ativos imobiliários, buscamos promover uma análise criteriosa da real condição patrimonial dos nossos clientes de sorte a promover um maior retorno financeiro possível bem com uma redução dos custos envolvidos com a aquisição e manutenção de imóveis.',
       data: [
-
         'Gerenciamento e Administração Imobiliária.',
         'Acompanhamento mensal dos prazos locatícios (Ações Renovatórias).',
         'Administração da Carteira de locações.',
@@ -66,6 +68,7 @@ export class AreasComponent implements OnInit {
   public selectArea(area: string): void {
     this.areaSelected = area;
   }
+
 
   ngOnInit() {
   }
