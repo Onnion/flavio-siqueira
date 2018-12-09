@@ -1,10 +1,12 @@
 import { Component, OnInit, Input, OnDestroy, OnChanges, SimpleChanges, EventEmitter, Output } from '@angular/core';
 import { Menu } from 'app/models/menu.model';
+import { listContent } from 'app/helpers/animations/animations';
 
 @Component({
   selector: 'app-display-data',
   templateUrl: './display-data.component.html',
-  styleUrls: ['./display-data.component.scss']
+  styleUrls: ['./display-data.component.scss'],
+  animations: [listContent]
 })
 export class DisplayDataComponent implements OnInit, OnDestroy, OnChanges {
 

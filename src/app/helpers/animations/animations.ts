@@ -43,3 +43,19 @@ export const bounceIn = animation(
     ),
     { params: { timing: DEFAULT_TIMING, delay: 0 } }
 );
+
+export const listContent = trigger('listContent', [
+    transition('* => *', [
+        query(':enter', style({ opacity: 0 }), { optional: true }),
+        query(':enter', stagger('150ms', [
+            animate('300ms cubic-bezier(.25,.75,.5,1.25)', keyframes([
+                style({ opacity: 0, transform: 'translate3d(0,100%,0)'}),
+                style({ opacity: .5, transform: ' translate3d(0,50%,0)'}),
+                style({ opacity: 1, transform: ' translate3d(0,0,0)'}),
+
+            ]))
+
+        ]), { optional: true }),
+
+    ])
+]);

@@ -21,9 +21,7 @@ export class ShowVideoComponent implements OnInit {
     this.close.emit(true);
   }
 
-
   ngOnInit() {
-    // tslint:disable-next-line:max-line-length
     this.frame = this.sanitized.bypassSecurityTrustHtml(this.video.embed);
   }
 

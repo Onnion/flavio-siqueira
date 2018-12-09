@@ -1,20 +1,17 @@
 <div class="media-menu">
-  <div>
+  <div style="padding: 3px;">
     <a [routerLink]="['/']">
-      <img src="http://via.placeholder.com/211x50" class=" img-fluid" alt="">
+      <img src="assets/img/brand/logo-nav.png" class=" img-fluid" alt="">
+
     </a>
   </div>
 
-    <div 
-    *ngFor="let menu of menuItens" 
-    [class.active]="selected === menu.value" 
-    class="content-type" 
-    (click)="select(menu)"
+  <div *ngFor="let menu of menuItens" [class.active]="selected === menu.value" class="content-type" (click)="select(menu)"
     [id]="menu.value">
-        <div>
-            <i [class]="menu.icon"></i>
-            <p>{{menu.label}}</p>
-        </div>
+    <div>
+      <i [class]="menu.icon"></i>
+      <p>{{menu.label}}</p>
     </div>
+  </div>
 
 </div>

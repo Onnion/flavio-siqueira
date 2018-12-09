@@ -15,10 +15,13 @@
   </div>
 </div>
 
-<div *ngIf="type.value === 'videos'" class="card" (click)="select()">
+<div *ngIf="type.value === 'videos'" (click)="select()">
   <!-- <img class="card-img-top img-fluid" src="//placehold.it/800x560" alt="Card image cap"> -->
-  <div class="">
+  <div class="video">
     <img src="{{content.thumbnail}}" class="img-fluid" alt="">
+    <div class="cover">
+      {{content.title}}
+    </div>
     <!-- <h4 class="card-title">{{content.title | titlecase}}</h4>
     <p class="card-text">{{createText(content.text) | titlecase}}</p>
     <blockquote class="card-blockquote">

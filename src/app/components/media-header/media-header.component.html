@@ -15,16 +15,27 @@
   </form> -->
   <div class="container-fluid">
     <div class="row">
-      <div class="col">
-        <div class="burger-container">
+        <div class="col" style="display: flex; justify-content: flex-start; align-items: center; vertical-align: middel;">
+            <div class="burger-container">
           <div class="burger" (click)="toogleMenu()">
             <div class="line" id="one"></div>
           </div>
         </div>
+
+        <div>
+            <a class="btn btn-sm btn-round" [routerLink]="['/']">
+              Voltar
+            </a>
+          </div>
       </div>
-      <div class="col" style="display: flex; justify-content: flex-end; align-items: center; vertical-align: middel;">
-        <p *ngIf="type">{{type.label}}</p>
+      <div class="col" style="display: flex; justify-content: center; align-items: center; vertical-align: middel;">
+        <p *ngIf="type" style="font-weight: bold">{{type.label}}</p>
       </div>
+      <!-- <div class="col" style="display: flex; justify-content: flex-end; align-items: center; vertical-align: middel;">
+        <a [routerLink]="['/']">
+          Voltar
+        </a>
+      </div> -->
     </div>
 
   </div>
