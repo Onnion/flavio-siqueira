@@ -3,7 +3,7 @@
     position: fixed!important;
     right: 10px;
     display: flex;
-    z-index: 9999;
+    z-index: 999;
     top: 0;
     height: 100vh;
     vertical-align: middle;
@@ -17,9 +17,14 @@
         list-style: none;
         border-radius: 30px;
 
-        li a {
-            color: #FFF;
-            font-size: 1.2em;
+        li {
+            margin: 5px 0px;
+        
+
+            a {
+                color: #FFF;
+                font-size: 1.2em;
+            }
         }
     }
 }

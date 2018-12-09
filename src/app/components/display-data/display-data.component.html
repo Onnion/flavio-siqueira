@@ -1,9 +1,20 @@
 <div class="container-fluid" id="content">
-    <div class="row">
+    <div class="row" *ngIf="type.value !== 'videos'">
         <div class="col-12">
+            <!-- [@listContent]="contents.length" -->
             <div class="card-columns">
                 <app-content *ngFor="let content of contents" (selectVideo)="select($event)" [type]="type" [content]="content"></app-content>
             </div>
         </div>
+
+    </div>
+
+    <!-- [@listContent]="contents.length" -->
+    <div class="row" *ngIf="type.value === 'videos'">
+        <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let content of contents" style="margin-bottom: 30px">
+            <app-content (selectVideo)="select($event)" [type]="type" [content]="content"></app-content>
+
+        </div>
+
     </div>
 </div>

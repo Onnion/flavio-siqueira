@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MediaComponent } from './media.component';
-import { ContentComponent } from 'app/components/new/content.component';
+import { ContentComponent } from 'app/components/content/content.component';
 import { DisplayDataComponent } from 'app/components/display-data/display-data.component';
 import { LoadingComponent } from 'app/components/loading/loading.component';
 import { MatProgressSpinnerModule, MatButtonModule } from '@angular/material';

@@ -24,16 +24,16 @@ export class AppComponent implements OnInit {
     ) {
 
         this.meta.addTags([
-            { name: 'description', content: 'Property Solutions' },
+            { name: 'description', content: 'Property Solutions - Governança Imobiliária & Consultoria' },
             { name: 'keywords', content: '' },
-            { name: 'theme-color', content: '#d7a56e' },
+            { name: 'theme-color', content: '#9F7425' },
             { property: 'og:type', content: 'website' },
-            { property: 'og:image', content: 'http://via.placeholder.com/211x50' },
+            { property: 'og:image', content: 'assets/img/apple-icon-180x180.png' },
             { property: 'og:image:type', content: 'image/png' },
             { property: 'og:image:width', content: '800' },
             { property: 'og:image:height', content: '600' },
             { property: 'og:title', content: 'Property Solutions' },
-            { property: 'og:description', content: 'Property Solutions' }
+            { property: 'og:description', content: 'Property Solutions - Governança Imobiliária & Consultoria' }
         ]);
     }
 

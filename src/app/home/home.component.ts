@@ -22,8 +22,13 @@ export class HomeComponent implements OnInit, AfterViewChecked {
     ngOnInit() { }
 
 
-    ngAfterViewChecked() {
+    public endLoad() {
         document.querySelector('.site-preloader').classList.add('none');
+
+    }
+
+
+    ngAfterViewChecked() {
     }
 
 
