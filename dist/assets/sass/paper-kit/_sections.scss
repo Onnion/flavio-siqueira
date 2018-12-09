@@ -29,8 +29,10 @@
     color: $white-color;
 }
 .section-dark{
-    background-color: #0b1011;
+    background-color: $background-color !important;
 }
+
+
 .section-image,
 .section-gold,
 .section-dark{

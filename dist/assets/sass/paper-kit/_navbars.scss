@@ -22,6 +22,7 @@
         padding: $navbar-padding-brand;
         font-size: $font-size-base;
         color: $default-color;
+        transition: .3s all;
         text-transform: uppercase;
     }
     .nav-link{
@@ -160,19 +161,19 @@
 .navbar-transparent, [class*="bg"]{
     .navbar-brand{
         color: $white-color;
-        @include opacity(.9);
+        @include opacity(0);
 
         &:focus,
         &:hover{
             background-color: transparent;
-            @include opacity(1);
+            @include opacity(0);
             color: $white-color;
         }
     }
 
     .navbar-nav{
         .nav-item .nav-link:not(.btn){
-            color: $white-color;
+            // color: $white-color;
             border-color: $white-color;
         }
         .active .nav-link
@@ -181,7 +182,7 @@
         .nav-item .nav-link:hover,
         .nav-item .nav-link:focus{
             background-color: transparent;
-            color: $white-color;
+            // color: $white-color;
             @include opacity(1);
         }
         .nav .nav-item a.btn:hover{
@@ -399,7 +400,7 @@
 
     .navbar[class*="bg-"] & .navbar-toggler-bar,
     .navbar.navbar-transparent & .navbar-toggler-bar{
-        background: #fff;
+        // background: #fff;
     }
 
     .navbar-toggler-bar{
