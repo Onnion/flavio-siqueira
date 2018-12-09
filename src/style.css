@@ -6,6 +6,12 @@ body {
     overflow-x: hidden;
 }
 
+.full-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #contact-area,
 #passport-process-area,
 #about,
