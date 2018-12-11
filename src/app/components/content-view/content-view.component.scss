@@ -10,5 +10,13 @@
     img {
         width: 100%!important;
     }
-}
 
+    & > div {
+        width: 100%!important;
+        padding: 0!important;
+    }
+    
+    p {
+        width: 100%!important;
+    }
+}
