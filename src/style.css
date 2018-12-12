@@ -86,7 +86,7 @@ body {
 .new div span,
 .new div b,
 .new div font {
-    text-transform: uppercase !important;
+    /* text-transform: uppercase !important; */
     text-decoration: none !important;
     color: #000000 !important;
     font-style: normal !important;
