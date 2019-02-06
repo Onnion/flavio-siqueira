@@ -1,9 +1,14 @@
 <div *ngIf="type.value !== 'videos'" class="card new" [routerLink]="['/midia', type.min, content.id, content.title]">
   <!-- <img class="card-img-top img-fluid" src="//placehold.it/800x560" alt="Card image cap"> -->
   <div class="card-body">
-    <h4 class="card-title">{{content.title | titlecase}}</h4>
+      <span class="badge badge-pill badge-danger" style="color: #FFFFFF!important; font-weight: bold!important">
+        <i class="fa fa-tag text-white" style="color: #FFFFFF!important; font-weight: bold!important"></i>
+        {{content.category.name}}
+      </span>
+
+    <h4 class="card-title">{{content.title}}</h4>
     <p class="card-text" [innerHtml]="createText(content.text)"></p>
-    <blockquote class="card-blockquote">
+    <!-- <blockquote class="card-blockquote">
       <footer>
         <a>
           <small class="text-muted">
@@ -11,7 +16,7 @@
           </small>
         </a>
       </footer>
-    </blockquote>
+    </blockquote> -->
   </div>
 </div>
 

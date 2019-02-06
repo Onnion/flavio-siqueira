@@ -86,7 +86,7 @@ body {
 .new div span,
 .new div b,
 .new div font {
-    text-transform: uppercase !important;
+    /* text-transform: uppercase !important; */
     text-decoration: none !important;
     color: #000000 !important;
     font-style: normal !important;
@@ -109,3 +109,25 @@ body {
 .mat-spinner circle {
     stroke: #d7a56e;
 }
+
+
+
+
+.text img {
+    width: 100%!important;
+    position: relative!important;
+}
+.text img.progressive-draft{
+    display: none;
+}
+    
+.text div {
+    width: 100%!important;
+    padding: 0!important;
+}
+    
+   
+.text p {
+    width: 100%!important;
+}
+
