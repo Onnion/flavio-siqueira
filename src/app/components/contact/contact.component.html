@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading text-center">
-                    <h2>Área de Contato</h2>
+                    <h2>Contato</h2>
                 </div>
             </div>
         </div>
@@ -47,7 +47,7 @@
                         </mat-form-field>
 
                         <div class="contact-btn text-center">
-                            <button [disabled]="status_form.loading || status_form.done" style="cursor: pointer" type="submit">{{getLabel()}}</button>
+                            <button [class.disabled]="status_form.loading || status_form.done" [disabled]="status_form.loading || status_form.done" style="cursor: pointer" type="submit">{{getLabel()}}</button>
                         </div>
                     </form>
                 </div>
