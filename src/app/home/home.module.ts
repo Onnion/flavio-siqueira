@@ -15,6 +15,7 @@ import { MatFormFieldModule, MatInputModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaskDirective } from 'app/directives/mask/mask.directive';
 import { MoreInfoComponent } from 'app/components/more-info/more-info.component';
+import { FistLetterPipe } from 'app/pipes/fist-letter.pipe';
 
 @NgModule({
     imports: [
@@ -37,7 +38,8 @@ import { MoreInfoComponent } from 'app/components/more-info/more-info.component'
         MapsComponent,
         AreasComponent,
         MaskDirective,
-        MoreInfoComponent
+        MoreInfoComponent,
+        FistLetterPipe
     ],
     exports: [ HomeComponent ],
     providers: []

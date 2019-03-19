@@ -60,7 +60,7 @@ export class AreasComponent implements OnInit, OnDestroy {
 
   private toggleArea(): void {
     let index = 0;
-    const timer = interval(5000);
+    const timer = interval(7000);
 
     this.timer = timer.subscribe(() => {
       this.areaSelected;
