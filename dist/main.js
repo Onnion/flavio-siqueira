@@ -84,32 +84,37 @@ var AppComponent = /** @class */ (function () {
         this.element = element;
         this.meta = meta;
         this.meta.addTags([
-            { name: 'description', content: 'Property Solutions - Governança Imobiliária & Consultoria' },
-            { name: 'keywords', content: '' },
-            { name: 'theme-color', content: '#9F7425' },
-            { property: 'og:type', content: 'website' },
-            { property: 'og:image', content: 'assets/img/apple-icon-180x180.png' },
-            { property: 'og:image:type', content: 'image/png' },
-            { property: 'og:image:width', content: '800' },
-            { property: 'og:image:height', content: '600' },
-            { property: 'og:title', content: 'Property Solutions' },
-            { property: 'og:description', content: 'Property Solutions - Governança Imobiliária & Consultoria' }
+            {
+                name: "description",
+                content: "Property Solutions - Governança Imobiliária & Consultoria"
+            },
+            { name: "keywords", content: "" },
+            { name: "theme-color", content: "#9F7425" },
+            { property: "og:type", content: "website" },
+            { property: "og:image", content: "assets/img/apple-icon-180x180.png" },
+            { property: "og:image:type", content: "image/png" },
+            { property: "og:image:width", content: "800" },
+            { property: "og:image:height", content: "600" },
+            { property: "og:title", content: "Property Solutions" },
+            {
+                property: "og:description",
+                content: "Property Solutions - Governança Imobiliária & Consultoria"
+            }
         ]);
     }
     AppComponent.prototype.modeMidia = function () {
         var snap = this.router.url.substring(1, 6);
-        return snap === 'midia';
+        return snap === "midia";
     };
     AppComponent.prototype.onWindowScroll = function () {
         if (!this.modeMidia()) {
-            var number = window.scrollY;
-            var navbar = this.element.nativeElement.children[0].children[0];
-            if (number > 30 || window.pageYOffset > 30) {
-                navbar.classList.remove('navbar-transparent');
-            }
-            else {
-                navbar.classList.add('navbar-transparent');
-            }
+            //const number = window.scrollY;
+            //const navbar: HTMLElement = this.element.nativeElement.children[0].children[0];
+            //if (number > 30 || window.pageYOffset > 30) {
+            //navbar.classList.remove('navbar-transparent');
+            //} else {
+            //navbar.classList.add('navbar-transparent');
+            //}
         }
     };
     AppComponent.prototype.refactorMethod = function () {
@@ -120,19 +125,19 @@ var AppComponent = /** @class */ (function () {
             //     window.document.activeElement.scrollTop = 0;
             // }
             // this.navbar.sidebarClose();
-            var html = document.getElementsByTagName('html')[0];
-            html.classList.remove('nav-open');
+            var html = document.getElementsByTagName("html")[0];
+            html.classList.remove("nav-open");
         });
         var ua = window.navigator.userAgent;
-        var trident = ua.indexOf('Trident/');
+        var trident = ua.indexOf("Trident/");
         if (trident > 0) {
             // IE 11 => return version number
-            var rv = ua.indexOf('rv:');
-            var version = parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+            var rv = ua.indexOf("rv:");
+            var version = parseInt(ua.substring(rv + 3, ua.indexOf(".", rv)), 10);
         }
         if (version) {
-            var body = document.getElementsByTagName('body')[0];
-            body.classList.add('ie-background');
+            var body = document.getElementsByTagName("body")[0];
+            body.classList.add("ie-background");
         }
     };
     AppComponent.prototype.ngOnInit = function () {
@@ -143,14 +148,14 @@ var AppComponent = /** @class */ (function () {
         __metadata("design:type", _shared_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_2__["NavbarComponent"])
     ], AppComponent.prototype, "navbar", void 0);
     __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"])('window:scroll', []),
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"])("window:scroll", []),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", []),
         __metadata("design:returntype", void 0)
     ], AppComponent.prototype, "onWindowScroll", null);
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-root',
+            selector: "app-root",
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.scss */ "./src/app/app.component.scss")],
             animations: [_helpers_animations_animations__WEBPACK_IMPORTED_MODULE_3__["routerTransition"]]
@@ -372,7 +377,7 @@ var AboutComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--start passport process area-->\n<section id=\"passport-process-area\">\n    <div class=\"container\">\n        <!--start section heading-->\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"section-heading text-center\">\n                    <h2>Áreas de atuação</h2>\n                </div>\n            </div>\n        </div>\n        <!--end section heading-->\n        <div class=\"row\">\n            <div role=\"tabpanel\">\n                <!--start tab menu-->\n                <ul class=\"nav nav-tabs\" role=\"tablist\" style=\"justify-content: center;\">\n                    <li *ngFor=\"let area of areas\" role=\"presentation\" (click)=\"selectArea(area.id)\" [class.active]=\"area.id === areaSelected\">\n                        <a style=\"cursor: pointer;\" role=\"tab\" data-toggle=\"tab\">\n                            {{area.label}}\n                        </a>\n                    </li>\n                </ul>\n                <!--end tab menu-->\n\n                <div class=\"tab-content\">\n\n\n                    <div *ngFor=\"let area of areas\" role=\"tabpanel\" [class.active]=\"area.id === areaSelected\" class=\"tab-pane\"\n                        id=\"{{area.id}}\">\n                        <div class=\"container\">\n                            <div class=\"row justify-content-center mb-5\">\n                                <div class=\"col-12\">\n\n\n                                    <div class=\"serv-icon\" style=\"align-items: center; display: flex;\">\n                                        <img src=\"assets/img/enterprise.svg\" class=\"img-responsive\" style=\"width: 71px;\"\n                                            alt=\"\" />\n                                        <h3 style=\"display: inline;margin-left: 10px;font-weight: 700;\">\n                                            {{area.label}}\n                                        </h3>\n                                    </div>\n                                    <div class=\"mission-dots\">\n                                        <ul>\n                                            <li></li>\n                                            <li></li>\n                                            <li></li>\n                                            <li></li>\n                                        </ul>\n                                    </div>\n                                    <p class=\"text-justify\"> {{area.resume}}</p>\n\n                                </div>\n\n                            </div>\n                            <!-- <div class=\"row\"> -->\n                            <div class=\"card-columns\">\n\n                                <div *ngFor=\"let data of area.data; let i = index\" class=\"card\">\n                                    <!-- <img class=\"card-img-top img-fluid\" src=\"//placehold.it/800x560\" alt=\"Card image cap\"> -->\n                                    <div class=\"card-body service-single\">\n                                        <!-- <span class=\"bg-text\">{{(i + 1).toLocaleString('en-US', {minimumIntegerDigits:\n                                            2, useGrouping:false})}}</span> -->\n                                        <p class=\"text-left\">{{data | titlecase}}</p>\n\n                                    </div>\n                                </div>\n\n\n                                <!-- <div *ngFor=\"let data of area.data; let i = index\" class=\"col-md-3 col-sm-6\"> -->\n                                <!-- <div class=\"service-single\"> -->\n                                <!-- <span class=\"bg-text\">{{(i + 1).toLocaleString('en-US', {minimumIntegerDigits:\n                                            2, useGrouping:false})}}</span> -->\n                                <!-- <div class=\"serv-icon\" style=\"padding-top: 20px;\"> -->\n                                <!-- <img src=\"assets/img/enterprise.svg\" class=\"img-responsive\" style=\"width: 71px;\"\n                                                alt=\"\"> -->\n                                <!-- </div> -->\n                                <!-- <h4>{{data}}</h4> -->\n                                <!-- <p class=\"text-left\">{{data | titlecase}}</p> -->\n                                <!-- </div> -->\n                                <!-- </div> -->\n                            </div>\n                        </div>\n                    </div>\n\n                </div>\n                <!--end tab content-->\n            </div>\n        </div>\n    </div>\n</section>\n<!--end passport process area-->"
+module.exports = "<!--start passport process area-->\n<section id=\"passport-process-area\">\n    <div class=\"container\">\n        <!--start section heading-->\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"section-heading text-center\">\n                    <h2>Áreas de atuação</h2>\n                </div>\n            </div>\n        </div>\n        <!--end section heading-->\n        <div class=\"row\">\n            <div role=\"tabpanel\">\n                <!--start tab menu-->\n                <ul class=\"nav nav-tabs\" role=\"tablist\" style=\"justify-content: center;\">\n                    <li *ngFor=\"let area of areas\" role=\"presentation\" (click)=\"selectArea(area.id)\" [class.active]=\"area.id === areaSelected\">\n                        <a style=\"cursor: pointer;\" role=\"tab\" data-toggle=\"tab\">\n                            {{area.label}}\n                        </a>\n                    </li>\n                </ul>\n                <!--end tab menu-->\n\n                <div class=\"tab-content\">\n\n\n                    <div *ngFor=\"let area of areas\" role=\"tabpanel\" [class.active]=\"area.id === areaSelected\" class=\"tab-pane\"\n                        id=\"{{area.id}}\">\n                        <div class=\"container\">\n                            <div class=\"row justify-content-center mb-5\">\n                                <div class=\"col-12\">\n\n\n                                    <div class=\"serv-icon\" style=\"align-items: center; display: flex;\">\n                                        <img src=\"assets/img/enterprise.svg\" class=\"img-responsive\" style=\"width: 71px;\"\n                                            alt=\"\" />\n                                        <h3 style=\"display: inline;margin-left: 10px;font-weight: 700;\">\n                                            {{area.label}}\n                                        </h3>\n                                    </div>\n                                    <div class=\"mission-dots\">\n                                        <ul>\n                                            <li></li>\n                                            <li></li>\n                                            <li></li>\n                                            <li></li>\n                                        </ul>\n                                    </div>\n                                    <p class=\"text-justify\"> {{area.resume}}</p>\n\n                                </div>\n\n                            </div>\n                            <!-- <div class=\"row\"> -->\n                            <div class=\"card-columns\">\n\n                                <div *ngFor=\"let data of area.data; let i = index\" class=\"card\">\n                                    <!-- <img class=\"card-img-top img-fluid\" src=\"//placehold.it/800x560\" alt=\"Card image cap\"> -->\n                                    <div class=\"card-body service-single\">\n                                        <!-- <span class=\"bg-text\">{{(i + 1).toLocaleString('en-US', {minimumIntegerDigits:\n                                            2, useGrouping:false})}}</span> -->\n                                        <p class=\"text-left\">{{data | fistLetter}}</p>\n\n                                    </div>\n                                </div>\n\n\n                                <!-- <div *ngFor=\"let data of area.data; let i = index\" class=\"col-md-3 col-sm-6\"> -->\n                                <!-- <div class=\"service-single\"> -->\n                                <!-- <span class=\"bg-text\">{{(i + 1).toLocaleString('en-US', {minimumIntegerDigits:\n                                            2, useGrouping:false})}}</span> -->\n                                <!-- <div class=\"serv-icon\" style=\"padding-top: 20px;\"> -->\n                                <!-- <img src=\"assets/img/enterprise.svg\" class=\"img-responsive\" style=\"width: 71px;\"\n                                                alt=\"\"> -->\n                                <!-- </div> -->\n                                <!-- <h4>{{data}}</h4> -->\n                                <!-- <p class=\"text-left\">{{data | titlecase}}</p> -->\n                                <!-- </div> -->\n                                <!-- </div> -->\n                            </div>\n                        </div>\n                    </div>\n\n                </div>\n                <!--end tab content-->\n            </div>\n        </div>\n    </div>\n</section>\n<!--end passport process area-->"
 
 /***/ }),
 
@@ -460,7 +465,7 @@ var AreasComponent = /** @class */ (function () {
     AreasComponent.prototype.toggleArea = function () {
         var _this = this;
         var index = 0;
-        var timer = Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["interval"])(5000);
+        var timer = Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["interval"])(7000);
         this.timer = timer.subscribe(function () {
             _this.areaSelected;
             index = index === 2 ? 0 : index + 1;
@@ -940,7 +945,7 @@ var LoadingComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <div class=\"section-heading\"> -->\n<h4 class=\"pt-1\"> <i class=\"fa fa-phone text-danger\"></i> (81) 3877-3798</h4>\n<h4 class=\"pt-1 pb-4\"> <i class=\"fa fa-map-marker text-danger\"></i> Nosso Endereço</h4>\n\n<!-- </div> -->\n\n<p>\n  Rua Ribeiro de Brito, n. 830</p>\n<p>\n  Edf centro empresarial Iberbras, sala 1201,\n</p>\n<p>\n  Boa Viagem, Recife/PE\n</p>\n\n<br>\n<br>\n\n<agm-map [scrollwheel]=false [minZoom]=16 [mapDraggable]=false [latitude]=\"lat\" [longitude]=\"lng\">\n\n  <agm-marker [title]=\"title\" [latitude]=\"lat\" [longitude]=\"lng\">\n  </agm-marker>\n\n</agm-map>"
+module.exports = "<!-- <div class=\"section-heading\"> -->\n<h4 class=\"pt-1\"> <i class=\"fa fa-phone text-danger\"></i> (81) 3877-3798 | (81) 99920-5306</h4>\n<h4 class=\"pt-1 pb-4\"> <i class=\"fa fa-map-marker text-danger\"></i> Nosso Endereço</h4>\n\n<!-- </div> -->\n\n<p>\n  Rua Ribeiro de Brito, n. 830</p>\n<p>\n  Edf centro empresarial Iberbras, sala 1201,\n</p>\n<p>\n  Boa Viagem, Recife/PE\n</p>\n\n<br>\n<br>\n\n<agm-map [scrollwheel]=false [minZoom]=16 [mapDraggable]=false [latitude]=\"lat\" [longitude]=\"lng\">\n\n  <agm-marker [title]=\"title\" [latitude]=\"lat\" [longitude]=\"lng\">\n  </agm-marker>\n\n</agm-map>"
 
 /***/ }),
 
@@ -1338,7 +1343,7 @@ var ShowVideoComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"social-links\">\n  <ul>\n      <li><a href=\"https://www.facebook.com/propertysolutions.com.br/\" target=\"_blank\"><i class=\"fa fa-facebook\"></i></a></li>\n      <li><a href=\"https://www.instagram.com/propertysolutions.com.br/\" target=\"_blank\"><i class=\"fa fa-instagram\"></i></a></li>\n      <li><a href=\"https://wa.me/5581999205306?text=Olá, Property - Governança Imobiliária & Consultoria.\" target=\"_blank\"><i class=\"fa fa-whatsapp\"></i></a></li>\n  </ul>\n</div>"
+module.exports = "<div class=\"social-links\">\n  <ul>\n      <li><a href=\"https://www.facebook.com/propertysolutions.com.br/\" target=\"_blank\"><i class=\"fa fa-facebook\"></i></a></li>\n      <li><a href=\"https://www.instagram.com/propertysolutions.com.br/\" target=\"_blank\"><i class=\"fa fa-instagram\"></i></a></li>\n      <li><a [href]=\"generateLink()\" target=\"_blank\"><i class=\"fa fa-whatsapp\"></i></a></li>\n  </ul>\n</div>"
 
 /***/ }),
 
@@ -1364,6 +1369,8 @@ module.exports = ".social-links {\n  position: fixed !important;\n  right: 10px;
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SocialLinksComponent", function() { return SocialLinksComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ngx_device_detector__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-device-detector */ "./node_modules/ngx-device-detector/ngx-device-detector.umd.js");
+/* harmony import */ var ngx_device_detector__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(ngx_device_detector__WEBPACK_IMPORTED_MODULE_1__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1374,18 +1381,23 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var SocialLinksComponent = /** @class */ (function () {
-    function SocialLinksComponent() {
+    function SocialLinksComponent(deviceService) {
+        this.deviceService = deviceService;
     }
-    SocialLinksComponent.prototype.ngOnInit = function () {
+    SocialLinksComponent.prototype.generateLink = function () {
+        var isDesktop = this.deviceService.isDesktop();
+        return "https://" + (isDesktop ? "web" : "api") + ".whatsapp.com/send?phone=5581999205306&text=Ol\u00E1, Property - Governan\u00E7a Imobili\u00E1ria & Consultoria.";
     };
+    SocialLinksComponent.prototype.ngOnInit = function () { };
     SocialLinksComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-social-links',
+            selector: "app-social-links",
             template: __webpack_require__(/*! ./social-links.component.html */ "./src/app/components/social-links/social-links.component.html"),
             styles: [__webpack_require__(/*! ./social-links.component.scss */ "./src/app/components/social-links/social-links.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [ngx_device_detector__WEBPACK_IMPORTED_MODULE_1__["DeviceDetectorService"]])
     ], SocialLinksComponent);
     return SocialLinksComponent;
 }());
@@ -1715,7 +1727,7 @@ module.exports = "<div class=\"wrapper\">\n    <div class=\"page-header\" id=\"h
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "#home {\n  padding: 40px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi92YXIvd3d3L2h0bWwvZmxhdmlvLXNpcXVlaXJhL3NyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksY0FBYSxFQUNoQiIsImZpbGUiOiJzcmMvYXBwL2hvbWUvaG9tZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIiNob21lIHtcbiAgICBwYWRkaW5nOiA0MHB4O1xufSJdfQ== */"
+module.exports = "#home {\n  padding: 100px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi92YXIvd3d3L2h0bWwvZmxhdmlvLXNpcXVlaXJhL3NyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksZUFBYyxFQUNqQiIsImZpbGUiOiJzcmMvYXBwL2hvbWUvaG9tZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIiNob21lIHtcbiAgICBwYWRkaW5nOiAxMDBweDtcbn0iXX0= */"
 
 /***/ }),
 
@@ -1794,12 +1806,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
 /* harmony import */ var app_directives_mask_mask_directive__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! app/directives/mask/mask.directive */ "./src/app/directives/mask/mask.directive.ts");
 /* harmony import */ var app_components_more_info_more_info_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! app/components/more-info/more-info.component */ "./src/app/components/more-info/more-info.component.ts");
+/* harmony import */ var app_pipes_fist_letter_pipe__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! app/pipes/fist-letter.pipe */ "./src/app/pipes/fist-letter.pipe.ts");
+/* harmony import */ var ngx_device_detector__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ngx-device-detector */ "./node_modules/ngx-device-detector/ngx-device-detector.umd.js");
+/* harmony import */ var ngx_device_detector__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(ngx_device_detector__WEBPACK_IMPORTED_MODULE_16__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -1831,7 +1848,8 @@ var HomeModule = /** @class */ (function () {
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_12__["BrowserAnimationsModule"],
                 _agm_core__WEBPACK_IMPORTED_MODULE_10__["AgmCoreModule"].forRoot({
                     apiKey: 'AIzaSyAc3mIx6dm3j6euaZkmmuafct-mpsBlvyY'
-                })
+                }),
+                ngx_device_detector__WEBPACK_IMPORTED_MODULE_16__["DeviceDetectorModule"].forRoot()
             ],
             declarations: [
                 _home_component__WEBPACK_IMPORTED_MODULE_5__["HomeComponent"],
@@ -1840,7 +1858,8 @@ var HomeModule = /** @class */ (function () {
                 app_components_maps_maps_component__WEBPACK_IMPORTED_MODULE_9__["MapsComponent"],
                 app_components_areas_areas_component__WEBPACK_IMPORTED_MODULE_8__["AreasComponent"],
                 app_directives_mask_mask_directive__WEBPACK_IMPORTED_MODULE_13__["MaskDirective"],
-                app_components_more_info_more_info_component__WEBPACK_IMPORTED_MODULE_14__["MoreInfoComponent"]
+                app_components_more_info_more_info_component__WEBPACK_IMPORTED_MODULE_14__["MoreInfoComponent"],
+                app_pipes_fist_letter_pipe__WEBPACK_IMPORTED_MODULE_15__["FistLetterPipe"]
             ],
             exports: [_home_component__WEBPACK_IMPORTED_MODULE_5__["HomeComponent"]],
             providers: []
@@ -2079,6 +2098,42 @@ var MediaModule = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/pipes/fist-letter.pipe.ts":
+/*!*******************************************!*\
+  !*** ./src/app/pipes/fist-letter.pipe.ts ***!
+  \*******************************************/
+/*! exports provided: FistLetterPipe */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FistLetterPipe", function() { return FistLetterPipe; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var FistLetterPipe = /** @class */ (function () {
+    function FistLetterPipe() {
+    }
+    FistLetterPipe.prototype.transform = function (str, args) {
+        return "" + str.slice(0, 1).toUpperCase() + str.slice(1).toLowerCase();
+    };
+    FistLetterPipe = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({
+            name: "fistLetter"
+        })
+    ], FistLetterPipe);
+    return FistLetterPipe;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/services/contents/contents.service.ts":
 /*!*******************************************************!*\
   !*** ./src/app/services/contents/contents.service.ts ***!
@@ -2210,7 +2265,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg fixed-top navbar-transparent\" color-on-scroll=\"500\">\n    <div class=\"container\">\n\n        <div class=\"navbar-translate\">\n            <a class=\"navbar-brand\" href=\"/\">\n                <img src=\"assets/img/brand/logo-nav.png\" class=\"logo\" alt=\"\">\n            </a>\n            <button class=\"navbar-toggler navbar-burger\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarToggler\"\n                aria-controls=\"navbarTogglerDemo02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" (click)=\"sidebarToggle()\">\n                <span class=\"navbar-toggler-bar\"></span>\n                <span class=\"navbar-toggler-bar\"></span>\n                <span class=\"navbar-toggler-bar\"></span>\n            </button>\n        </div>\n\n        <div class=\"collapse navbar-collapse\" id=\"navbarToggler\">\n            <ul class=\"navbar-nav ml-auto\">\n\n                <li class=\"nav-item\">\n                    <a (click)=\"navScroll('home')\" class=\"nav-link\" target=\"_blank\">\n                        Início\n                    </a>\n                </li>\n                <li class=\"nav-item\">\n                    <a (click)=\"navScroll('about')\" class=\"nav-link\" target=\"_blank\">\n                        Quem Somos\n                    </a>\n                </li>\n                <li class=\"nav-item\">\n                    <a (click)=\"navScroll('passport-process-area')\" class=\"nav-link\" target=\"_blank\">\n                        Áreas de atuação\n                    </a>\n                </li>\n                <li class=\"nav-item\">\n                    <a (click)=\"navScroll('contact-area')\" class=\"nav-link\" target=\"_blank\">\n                        Contato\n                    </a>\n                </li>\n                <li class=\"nav-item\">\n                    <a (click)=\"navScroll('more-info')\" class=\"nav-link\" target=\"_blank\">\n                        Links úteis\n                    </a>\n                </li>\n                <li class=\"nav-item\">\n                    <a  [routerLink]=\"['/midia/noticias']\" class=\"nav-link\">\n                        <span> Mídias</span>\n                    </a>\n                </li>\n            </ul>\n        </div>\n\n    </div>\n</nav>\n"
+module.exports = "<nav class=\"navbar navbar-expand-lg fixed-top\" color-on-scroll=\"500\">\n    <div class=\"container\">\n\n        <div class=\"navbar-translate\">\n            <a class=\"navbar-brand\" href=\"/\">\n                <img src=\"assets/img/brand/logo-nav.png\" class=\"logo\" alt=\"\">\n            </a>\n            <button class=\"navbar-toggler navbar-burger\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarToggler\"\n                aria-controls=\"navbarTogglerDemo02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" (click)=\"sidebarToggle()\">\n                <span class=\"navbar-toggler-bar\"></span>\n                <span class=\"navbar-toggler-bar\"></span>\n                <span class=\"navbar-toggler-bar\"></span>\n            </button>\n        </div>\n\n        <div class=\"collapse navbar-collapse\" id=\"navbarToggler\">\n            <ul class=\"navbar-nav ml-auto\">\n\n                <li class=\"nav-item\">\n                    <a (click)=\"navScroll('home')\" class=\"nav-link\" target=\"_blank\">\n                        Início\n                    </a>\n                </li>\n                <li class=\"nav-item\">\n                    <a (click)=\"navScroll('about')\" class=\"nav-link\" target=\"_blank\">\n                        Quem Somos\n                    </a>\n                </li>\n                <li class=\"nav-item\">\n                    <a (click)=\"navScroll('passport-process-area')\" class=\"nav-link\" target=\"_blank\">\n                        Áreas de atuação\n                    </a>\n                </li>\n                <li class=\"nav-item\">\n                    <a (click)=\"navScroll('contact-area')\" class=\"nav-link\" target=\"_blank\">\n                        Contato\n                    </a>\n                </li>\n                <li class=\"nav-item\">\n                    <a (click)=\"navScroll('more-info')\" class=\"nav-link\" target=\"_blank\">\n                        Links úteis\n                    </a>\n                </li>\n                <li class=\"nav-item\">\n                    <a  [routerLink]=\"['/midia/noticias']\" class=\"nav-link\">\n                        <span> Mídias</span>\n                    </a>\n                </li>\n            </ul>\n        </div>\n\n    </div>\n</nav>\n"
 
 /***/ }),
 
