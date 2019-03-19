@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaskDirective } from 'app/directives/mask/mask.directive';
 import { MoreInfoComponent } from 'app/components/more-info/more-info.component';
 import { FistLetterPipe } from 'app/pipes/fist-letter.pipe';
+import { DeviceDetectorModule } from 'ngx-device-detector';
 
 @NgModule({
     imports: [
@@ -29,7 +30,8 @@ import { FistLetterPipe } from 'app/pipes/fist-letter.pipe';
         BrowserAnimationsModule,
         AgmCoreModule.forRoot({
             apiKey: 'AIzaSyAc3mIx6dm3j6euaZkmmuafct-mpsBlvyY'
-        })
+        }),
+        DeviceDetectorModule.forRoot()
     ],
     declarations: [
         HomeComponent,

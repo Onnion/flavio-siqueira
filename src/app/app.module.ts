@@ -14,7 +14,6 @@ import { MediaModule } from './media/media.module';
 import { ContentsService } from './services/contents/contents.service';
 import { HttpClientModule } from '@angular/common/http';
 import { SocialLinksComponent } from './components/social-links/social-links.component';
-import { FistLetterPipe } from './pipes/fist-letter.pipe';
 
 @NgModule({
   declarations: [
