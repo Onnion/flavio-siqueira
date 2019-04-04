@@ -11,29 +11,11 @@ export class ContactService {
 
   constructor(private http: HttpClient) {}
 
-  public get(
-    type: "news" | "videos" | "articles" | "decisions"
-  ): Observable<any> {
+  public sendContact(form: any): Observable<any> {
     return new Observable(observer => {
-      this.http.get(`${this.API_URL}/${type}`).subscribe(
-        (contents: any) => {
-          observer.next(contents);
-        },
-        error => {
-          observer.error(error);
-        }
-      );
-    });
-  }
-
-  public show(
-    type: "news" | "videos" | "articles" | "decisions",
-    id: number
-  ): Observable<Content> {
-    return new Observable(observer => {
-      this.http.get(`${this.API_URL}/${type}/${id}`).subscribe(
-        (content: any) => {
-          observer.next(content.data);
+      this.http.post(`${this.API_URL}/contacts`, form).subscribe(
+        () => {
+          observer.next(true);
         },
         error => {
           observer.error(error);
